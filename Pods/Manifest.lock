@@ -1,5 +1,5 @@
 PODS:
-  - Amplitude-iOS (3.8.1)
+  - Amplitude-iOS (3.8.3)
   - MBProgressHUD (0.9.2)
 
 DEPENDENCIES:
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 0.9.2)
 
 SPEC CHECKSUMS:
-  Amplitude-iOS: 153d280ce87ab715af56ed6e91739b4d885afd43
+  Amplitude-iOS: e624e4506b911ab0975b8de49dd63b6d65386892
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
 
 COCOAPODS: 0.39.0
