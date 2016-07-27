@@ -84,16 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-iOStoPOSExample/Alamofire.framework"
   install_framework "Pods-iOStoPOSExample/Amplitude_iOS.framework"
-  install_framework "Pods-iOStoPOSExample/CryptoSwift.framework"
   install_framework "Pods-iOStoPOSExample/MBProgressHUD.framework"
-  install_framework "Pods-iOStoPOSExample/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-iOStoPOSExample/Alamofire.framework"
   install_framework "Pods-iOStoPOSExample/Amplitude_iOS.framework"
-  install_framework "Pods-iOStoPOSExample/CryptoSwift.framework"
   install_framework "Pods-iOStoPOSExample/MBProgressHUD.framework"
-  install_framework "Pods-iOStoPOSExample/SwiftyJSON.framework"
 fi
