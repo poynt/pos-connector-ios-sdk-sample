@@ -32,27 +32,16 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
     
     let paymentManager =  PoyntPOSConnectionManager()
     let payment = PoyntPaymentObject()
-    var pastTransactions: [PoyntTransactionObject] = []
     var currentItem: PoyntOrderItemObject?
-    var currentTransactionResult: String = ""
-    var currentTransactionResponse: PoyntTransactionResponseObject?
+
     var selectingTerminal: Bool = false
     var initialLoad: Bool = true
 
-    let titles: [String] = [
-        "COMPLETED",
-        "AUTHORIZED",
-        "PROCESSED",
-        "VOIDED",
-        "REFUNDED",
-        "CANCELED",
-        "FAILED",
-        "HOLD",
-        "DECLINED"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.currentTransactionResult = self.titles[0]
-        PoyntDebug.sharedDebugger.verbose = true
+
+        PoyntDebug.sharedDebugger.verbose = false
         self.setupSamplePayment()
         self.setupDefaultUI()
         self.setupPaymentManager()

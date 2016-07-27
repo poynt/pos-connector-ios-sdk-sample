@@ -92,15 +92,15 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 # endif
 #endif
 #if defined(__has_feature) && __has_feature(modules)
-@import ObjectiveC;
 @import Foundation;
+@import ObjectiveC;
+@import Foundation.NSURLSession;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 
-@interface NSObject (SWIFT_EXTENSION(PoyntLib))
-- (NSDictionary<NSString *, id> * _Nonnull)asDictionary;
+@interface NSData (SWIFT_EXTENSION(PoyntLib))
 @end
 
 
@@ -169,23 +169,32 @@ SWIFT_CLASS("_TtC8PoyntLib16PoyntOrderObject")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSError;
 @class PoyntPaymentObject;
 @class PoyntTransactionObject;
 @class NSString;
+@class NSURLSession;
+@class NSURLSessionTask;
 
 SWIFT_CLASS("_TtC8PoyntLib25PoyntPOSConnectionManager")
-@interface PoyntPOSConnectionManager : NSObject <NSStreamDelegate>
+@interface PoyntPOSConnectionManager : NSObject <NSURLSessionTaskDelegate, NSURLSessionDelegate>
+@property (nonatomic, copy) void (^ _Nullable onError)(NSError * _Nonnull error);
 @property (nonatomic, copy) NSString * _Nullable url;
 @property (nonatomic, copy) NSString * _Nonnull pairingCode;
 @property (nonatomic, copy) NSString * _Nonnull clientName;
+@property (nonatomic) NSInteger timeout;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)authorizeSales:(PoyntPaymentObject * _Nonnull)paymentObject;
+- (void)authorizeVoidPreSales:(PoyntTransactionObject * _Nonnull)transaction;
 - (void)authorizeVoid:(PoyntTransactionObject * _Nonnull)transaction;
 - (void)authorizeRefund:(PoyntTransactionObject * _Nonnull)transaction;
 - (void)authorizePreSales:(PoyntPaymentObject * _Nonnull)paymentObject;
 - (void)authorizePairing:(NSString * _Nonnull)code;
-- (void)authorizeVoidPreSales:(PoyntTransactionObject * _Nonnull)transaction;
 - (void)authorizeCapture:(PoyntTransactionObject * _Nonnull)transaction;
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
+- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
+- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
+- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;
 @end
 
 
@@ -265,7 +274,6 @@ SWIFT_CLASS("_TtC8PoyntLib22PoyntTransactionObject")
 - (nonnull instancetype)initWithData:(NSDictionary<NSString *, id> * _Nonnull)data OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSData;
 
 SWIFT_CLASS("_TtC8PoyntLib30PoyntTransactionResponseObject")
 @interface PoyntTransactionResponseObject : NSObject
