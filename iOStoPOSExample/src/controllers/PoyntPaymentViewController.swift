@@ -253,7 +253,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         }
 
         //...gets a transaction object
-        paymentManager.onTransactionResponse = {(obj:PoyntTransactionResponseObject,type:PoyntActionType) -> Void in
+        paymentManager.onTransactionResponse = {(obj:PoyntTransactionResponseObject,type:Int) -> Void in
             MBProgressHUD.hideHUDForView(self.view, animated: true)
             print("\(#function)\r\nreceived response for \(type) ---> \(obj)")
             if let json = obj.rawJson as AnyObject?{
@@ -271,10 +271,10 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             var capture: UIAlertAction?
             if obj.status == "COMPLETED" || obj.status == "SUCCESS"{
                 self.bottomContainer.hidden = false
-                if type == .AuthorizeSales || type == .AuthorizePreSales {
+                if type == PoyntActionType.AuthorizeSales.rawValue || type == PoyntActionType.AuthorizePreSales.rawValue {
                     refund = UIAlertAction(title: "Void", style: .Destructive, handler: { (action) in
                         if let transaction = obj.transactions.first as PoyntTransactionObject? {
-                            if type == .AuthorizeSales {
+                            if type == PoyntActionType.AuthorizeSales.rawValue {
                                 self.poyntAction(.AuthorizeVoid, transaction: transaction)
                             }else{
                                 self.poyntAction(.AuthorizeVoidPreSales, transaction: transaction)

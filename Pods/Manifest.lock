@@ -1,31 +1,13 @@
 PODS:
-  - Alamofire (3.4.1)
-  - Amplitude-iOS (3.8.1)
-  - CryptoSwift (0.5.1)
+  - Amplitude-iOS (3.8.3)
   - MBProgressHUD (0.9.2)
-  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.4)
   - Amplitude-iOS
-  - CryptoSwift
   - MBProgressHUD (~> 0.9.2)
-  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
-
-EXTERNAL SOURCES:
-  SwiftyJSON:
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
-
-CHECKOUT OPTIONS:
-  SwiftyJSON:
-    :commit: 73670b94292b8d8496c398a973f56ac67789ba9f
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
-  Amplitude-iOS: 153d280ce87ab715af56ed6e91739b4d885afd43
-  CryptoSwift: df42dda18baf6c76347a94e227dbcc0a341304bd
+  Amplitude-iOS: e624e4506b911ab0975b8de49dd63b6d65386892
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

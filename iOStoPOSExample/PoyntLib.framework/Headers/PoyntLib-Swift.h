@@ -170,6 +170,7 @@ SWIFT_CLASS("_TtC8PoyntLib16PoyntOrderObject")
 @end
 
 @class NSError;
+@class PoyntTransactionResponseObject;
 @class PoyntPaymentObject;
 @class PoyntTransactionObject;
 @class NSString;
@@ -179,6 +180,7 @@ SWIFT_CLASS("_TtC8PoyntLib16PoyntOrderObject")
 SWIFT_CLASS("_TtC8PoyntLib25PoyntPOSConnectionManager")
 @interface PoyntPOSConnectionManager : NSObject <NSURLSessionTaskDelegate, NSURLSessionDelegate>
 @property (nonatomic, copy) void (^ _Nullable onError)(NSError * _Nonnull error);
+@property (nonatomic, copy) void (^ _Nullable onTransactionResponse)(PoyntTransactionResponseObject * _Nonnull data, NSInteger type);
 @property (nonatomic, copy) NSString * _Nullable url;
 @property (nonatomic, copy) NSString * _Nonnull pairingCode;
 @property (nonatomic, copy) NSString * _Nonnull clientName;
