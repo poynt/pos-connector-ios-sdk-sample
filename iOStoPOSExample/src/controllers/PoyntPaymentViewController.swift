@@ -266,7 +266,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
 
             
             var title = "Status: \(obj.status)"
-            var msg = "\(type) response details below."
+            var msg = " response details below."
             var refund: UIAlertAction?
             var capture: UIAlertAction?
             if obj.status == "COMPLETED" || obj.status == "SUCCESS"{
