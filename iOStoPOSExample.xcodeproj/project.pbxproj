@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0E22171D50775000FE3742 /* PoyntLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0E22161D50775000FE3742 /* PoyntLib.framework */; };
+		5D0E22181D50775800FE3742 /* PoyntLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0E22161D50775000FE3742 /* PoyntLib.framework */; };
+		5D0E22191D50775800FE3742 /* PoyntLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0E22161D50775000FE3742 /* PoyntLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D60890E1D108D9E0059485E /* String+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60890D1D108D9E0059485E /* String+Currency.swift */; };
 		5D66BF831D107C4F00F18BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D66BF6F1D107C4F00F18BB9 /* Assets.xcassets */; };
 		5D66BF861D107C4F00F18BB9 /* PoyntOrderItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D66BF731D107C4F00F18BB9 /* PoyntOrderItemViewController.swift */; };
@@ -14,10 +17,6 @@
 		5D66BF921D107C4F00F18BB9 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D66BF821D107C4F00F18BB9 /* ItemTableViewCell.swift */; };
 		5D66BF971D107CA400F18BB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D66BF931D107CA400F18BB9 /* LaunchScreen.storyboard */; };
 		5D66BF981D107CA400F18BB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D66BF951D107CA400F18BB9 /* Main.storyboard */; };
-		5D8C86A41D5073CC00670C11 /* PoyntLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8C86A21D5073C100670C11 /* PoyntLib.framework */; };
-		5D8C86A81D50744500670C11 /* PoyntLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8C86A71D50744500670C11 /* PoyntLib.framework */; };
-		5D8C86A91D50746700670C11 /* PoyntLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8C86A71D50744500670C11 /* PoyntLib.framework */; };
-		5D8C86AA1D50746700670C11 /* PoyntLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8C86A71D50744500670C11 /* PoyntLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5DA19C8B1D1C7992006B3D49 /* ChooseTerminalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA19C8A1D1C7992006B3D49 /* ChooseTerminalViewController.swift */; };
 		5DDD713E1CA9B6B800DF1093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD713D1CA9B6B800DF1093 /* AppDelegate.swift */; };
 		5DF35BB31C768D6400A3E46E /* TCPTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF35BB21C768D6400A3E46E /* TCPTestTests.swift */; };
@@ -43,13 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5D8C86A61D5073CC00670C11 /* Embed Frameworks */ = {
+		5D0E22151D5076EA00FE3742 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5D8C86AA1D50746700670C11 /* PoyntLib.framework in Embed Frameworks */,
+				5D0E22191D50775800FE3742 /* PoyntLib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +58,7 @@
 /* Begin PBXFileReference section */
 		007A78692370A3FE7319555A /* Pods-iOStoPOSExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOStoPOSExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOStoPOSExample/Pods-iOStoPOSExample.release.xcconfig"; sourceTree = "<group>"; };
 		5D0BA2331C88F8A600C28592 /* iOStoPOSExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOStoPOSExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		5D0E22161D50775000FE3742 /* PoyntLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PoyntLib.framework; sourceTree = "<group>"; };
 		5D60890D1D108D9E0059485E /* String+Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Currency.swift"; sourceTree = "<group>"; };
 		5D66BF6F1D107C4F00F18BB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = src/Assets.xcassets; sourceTree = "<group>"; };
 		5D66BF731D107C4F00F18BB9 /* PoyntOrderItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoyntOrderItemViewController.swift; sourceTree = "<group>"; };
@@ -66,8 +66,6 @@
 		5D66BF821D107C4F00F18BB9 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		5D66BF941D107CA400F18BB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D66BF961D107CA400F18BB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5D8C86A21D5073C100670C11 /* PoyntLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PoyntLib.framework; path = "/Users/ericmcconkie/Downloads/pos-connector-ios-sdk-sample/iOStoPOSExample/PoyntLib.framework"; sourceTree = "<absolute>"; };
-		5D8C86A71D50744500670C11 /* PoyntLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PoyntLib.framework; sourceTree = "<group>"; };
 		5DA19C8A1D1C7992006B3D49 /* ChooseTerminalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseTerminalViewController.swift; sourceTree = "<group>"; };
 		5DDD713D1CA9B6B800DF1093 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DF35B9A1C768D6400A3E46E /* iOStoPOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOStoPOSExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,10 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D8C86A81D50744500670C11 /* PoyntLib.framework in Frameworks */,
-				5D8C86A41D5073CC00670C11 /* PoyntLib.framework in Frameworks */,
+				5D0E22171D50775000FE3742 /* PoyntLib.framework in Frameworks */,
 				F95FD70E43A81080465E1DDD /* Pods_iOStoPOSExample.framework in Frameworks */,
-				5D8C86A91D50746700670C11 /* PoyntLib.framework in Frameworks */,
+				5D0E22181D50775800FE3742 /* PoyntLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +111,7 @@
 		5D0BA2471C88F93F00C28592 /* supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				5D8C86A71D50744500670C11 /* PoyntLib.framework */,
+				5D0E22161D50775000FE3742 /* PoyntLib.framework */,
 				5D66BF931D107CA400F18BB9 /* LaunchScreen.storyboard */,
 				5D66BF951D107CA400F18BB9 /* Main.storyboard */,
 				5D66BF6F1D107C4F00F18BB9 /* Assets.xcassets */,
@@ -235,7 +232,7 @@
 				5DF35B981C768D6400A3E46E /* Resources */,
 				68731286F9F524BB52E3AF76 /* Embed Pods Frameworks */,
 				BB536559D9108A0435C72D41 /* Copy Pods Resources */,
-				5D8C86A61D5073CC00670C11 /* Embed Frameworks */,
+				5D0E22151D5076EA00FE3742 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -1,0 +1,10 @@
+framework module PoyntLib {
+  umbrella header "PoyntLib.h"
+
+  export *
+  module * { export * }
+}
+
+module PoyntLib.Swift {
+    header "PoyntLib-Swift.h"
+}
