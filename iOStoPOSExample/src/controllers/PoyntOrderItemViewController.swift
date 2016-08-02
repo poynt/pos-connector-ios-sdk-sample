@@ -48,7 +48,7 @@ class PoyntOrderItemViewController: UIViewController,UITableViewDataSource,UITab
                             self.tfUnitPrice.text = "\(up)"
             }
         }else {
-            self.item = PoyntOrderItemObject(sku: nil, unitPrice: nil, quantity: nil)
+            self.item = PoyntOrderItemObject(sku: nil, unitPrice: 0, quantity: nil)
         }
     }
 
@@ -66,7 +66,10 @@ class PoyntOrderItemViewController: UIViewController,UITableViewDataSource,UITab
             itm.quantity = qty ?? 1
             itm.sku = self.tfSku.text
             itm.name = self.tfName.text
-            itm.unitPrice = Int(self.tfUnitPrice.text!)
+            if let txt = self.tfUnitPrice.text as String?{
+                itm.unitPrice = Int(txt)!
+            }
+
             itm.clientNotes = tfNotes.text
         }
         //close

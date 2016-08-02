@@ -142,6 +142,7 @@ SWIFT_CLASS("_TtC8PoyntLib20PoyntOrderItemObject")
 @property (nonatomic, copy) NSString * _Nullable clientNotes;
 @property (nonatomic, copy) NSString * _Nullable status;
 @property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic) NSInteger unitPrice;
 @property (nonatomic, copy) NSArray<PoyntOrderItemTax *> * _Nullable taxes;
 @property (nonatomic, copy) NSArray<PoyntDiscountObject *> * _Nullable discounts;
 @property (nonatomic) float quantity;

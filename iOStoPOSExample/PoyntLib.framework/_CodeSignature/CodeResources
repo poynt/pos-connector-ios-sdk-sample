@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/PoyntLib-Swift.h</key>
 		<data>
-		i8VPESPHUfLrhncGLIoD0sWrdYg=
+		uy+zkoUAteLV7WxXbmT1YmRCrZ0=
 		</data>
 		<key>Headers/PoyntLib.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/PoyntLib.swiftmodule/arm.swiftmodule</key>
 		<data>
-		4rL9OQ6JNhXwp6eQDGYmWUhlX58=
+		IeeavW8UDarJ9N/4XFle/AAFBsk=
 		</data>
 		<key>Modules/PoyntLib.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/PoyntLib.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		u76MQLt3+M1zmFVcssFKD3ujNrk=
+		rpjAVbEHDp34Kf+2s4hP4CgfA5s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,11 +43,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			i8VPESPHUfLrhncGLIoD0sWrdYg=
+			uy+zkoUAteLV7WxXbmT1YmRCrZ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Yi0O1bD5xq4Cdv2G8h7FI80eKJceSz+5fX77p3rIo+I=
+			3hQW21K5FihZxnlX103wK2x7CunZB2LxZxvDHQx6IiU=
 			</data>
 		</dict>
 		<key>Headers/PoyntLib.h</key>
@@ -76,11 +76,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4rL9OQ6JNhXwp6eQDGYmWUhlX58=
+			IeeavW8UDarJ9N/4XFle/AAFBsk=
 			</data>
 			<key>hash2</key>
 			<data>
-			pAD8JITaXxYQOzZOSsMl09LuIous9wN8YQ1IefnzNuo=
+			rUMUbQovcpjvzR56ebldMbdjUmWKhN2YKIA+jf/stqo=
 			</data>
 		</dict>
 		<key>Modules/PoyntLib.swiftmodule/arm64.swiftdoc</key>
@@ -98,11 +98,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			u76MQLt3+M1zmFVcssFKD3ujNrk=
+			rpjAVbEHDp34Kf+2s4hP4CgfA5s=
 			</data>
 			<key>hash2</key>
 			<data>
-			ws4oIpO3tPj7vO6mKYzHerKhNBgpbL9EazyZmmtJKlk=
+			PR3A7LgTU4+LsQjrS677L7aJQpEOEUwh1qruL+3RKCw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
