@@ -154,6 +154,7 @@ SWIFT_CLASS("_TtC8PoyntLib17PoyntOrderItemTax")
 @interface PoyntOrderItemTax : NSObject
 @property (nonatomic, copy) NSString * _Nullable id;
 @property (nonatomic, copy) NSString * _Nullable type;
+@property (nonatomic) NSInteger amount;
 - (nonnull instancetype)initWithAmount:(NSInteger)amount type:(NSString * _Nullable)type OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -203,6 +204,9 @@ SWIFT_CLASS("_TtC8PoyntLib25PoyntPOSConnectionManager")
 
 SWIFT_CLASS("_TtC8PoyntLib24PoyntPaymentAmountObject")
 @interface PoyntPaymentAmountObject : NSObject
+@property (nonatomic) NSInteger subTotal;
+@property (nonatomic) NSInteger discountTotal;
+@property (nonatomic) NSInteger taxTotal;
 @property (nonatomic, copy) NSString * _Nullable currency;
 - (nonnull instancetype)initWithOrder:(PoyntOrderObject * _Nonnull)order OBJC_DESIGNATED_INITIALIZER;
 - (void)calculate:(PoyntOrderObject * _Nonnull)order;
@@ -212,6 +216,8 @@ SWIFT_CLASS("_TtC8PoyntLib24PoyntPaymentAmountObject")
 SWIFT_CLASS("_TtC8PoyntLib18PoyntPaymentObject")
 @interface PoyntPaymentObject : NSObject
 @property (nonatomic, copy) NSString * _Nonnull referenceId;
+@property (nonatomic) NSInteger amount;
+@property (nonatomic) NSInteger tipAmount;
 @property (nonatomic, strong) PoyntPaymentAmountObject * _Nullable amounts;
 @property (nonatomic, copy) NSString * _Nullable currency;
 @property (nonatomic, copy) NSString * _Nullable orderId;

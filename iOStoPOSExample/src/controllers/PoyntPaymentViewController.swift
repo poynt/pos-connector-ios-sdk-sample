@@ -146,8 +146,8 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             formatter.numberStyle = .CurrencyStyle
 
 
-            lblSubtotal.text = "Subtotal:\t\(String.currencyForFloat(Float(amnts.subTotal!)))"
-            lblTax.text = "Tax:\t\(String.currencyForFloat(Float(amnts.taxTotal!)))"
+            lblSubtotal.text = "Subtotal:\t\(String.currencyForFloat(Float(amnts.subTotal)))"
+            lblTax.text = "Tax:\t\(String.currencyForFloat(Float(amnts.taxTotal)))"
             lblDiscounts.text = "Discount:\t\(String.currencyForFloat(Float(-payment.absoluteDiscountTotal)))"
             var ttl = 0
             if let total = payment.amount as Int? {

@@ -168,7 +168,7 @@ class PoyntOrderItemViewController: UIViewController,UITableViewDataSource,UITab
                 if tableView == self.tableViewTaxes {
                     if let txs = itm.taxes as [PoyntOrderItemTax]? {
                         let tx = txs[indexPath.row]
-                        cell.textLabel?.text = "\(String.currencyForFloat(Float(tx.amount!))) - \(tx.type!)"
+                        cell.textLabel?.text = "\(String.currencyForFloat(Float(tx.amount))) - \(tx.type!)"
                     }
                 }
             }

@@ -10,6 +10,7 @@
 		5D4BB2D61D51493000BD13AC /* PoyntLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4BB2D51D51493000BD13AC /* PoyntLib.framework */; };
 		5D4BB2D71D51495400BD13AC /* PoyntLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4BB2D51D51493000BD13AC /* PoyntLib.framework */; };
 		5D4BB2D81D51495400BD13AC /* PoyntLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4BB2D51D51493000BD13AC /* PoyntLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D4BB2D91D51501600BD13AC /* PoyntLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4BB2D51D51493000BD13AC /* PoyntLib.framework */; };
 		5D60890E1D108D9E0059485E /* String+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60890D1D108D9E0059485E /* String+Currency.swift */; };
 		5D66BF831D107C4F00F18BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D66BF6F1D107C4F00F18BB9 /* Assets.xcassets */; };
 		5D66BF861D107C4F00F18BB9 /* PoyntOrderItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D66BF731D107C4F00F18BB9 /* PoyntOrderItemViewController.swift */; };
@@ -95,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4BB2D91D51501600BD13AC /* PoyntLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,7 +597,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = TCPTestTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOStoPOSExample",
+				);
+				INFOPLIST_FILE = iOStoPOSExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.poynt.TCPTestTests;
 				PRODUCT_NAME = iOStoPOSExample;
@@ -607,7 +613,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = TCPTestTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOStoPOSExample",
+				);
+				INFOPLIST_FILE = iOStoPOSExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.poynt.TCPTestTests;
 				PRODUCT_NAME = iOStoPOSExample;
@@ -618,7 +628,7 @@
 		5DF35BC91C768D6400A3E46E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = TCPTestUITests/Info.plist;
+				INFOPLIST_FILE = iOStoPOSExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.poynt.TCPTestUITests;
 				PRODUCT_NAME = iOStoPOSExample;
@@ -630,7 +640,7 @@
 		5DF35BCA1C768D6400A3E46E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = TCPTestUITests/Info.plist;
+				INFOPLIST_FILE = iOStoPOSExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.poynt.TCPTestUITests;
 				PRODUCT_NAME = iOStoPOSExample;
