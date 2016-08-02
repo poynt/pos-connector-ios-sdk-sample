@@ -10,6 +10,72 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
+		<key>0BFC23BE6A8B542B2AAC08F5788BDF32</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>7C9496FF125B60FD5C5B455050225817</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ARCHS</key>
+				<array>
+					<string>$(ARCHS_STANDARD_64_BIT)</string>
+				</array>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-iOStoPOSExample/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.1</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-iOStoPOSExample/Pods-iOStoPOSExample.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_iOStoPOSExample</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
 		<key>0ECAD3CE95CA19E5AFE91894C857527C</key>
 		<dict>
 			<key>buildConfigurations</key>
@@ -27,7 +93,7 @@
 		<key>0F6FCF15CC1F4F05C46539443FDA2AAB</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4CB83CFB552363C14601C6A8B7935D93</string>
+			<string>A83C101219E7ED4222CD65BCE24B0A5E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -51,85 +117,37 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>158B0E82BDA5BAAF237CFB25510479D3</key>
+		<key>17AC5A268222DB82A9D5A93966C35F0E</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AMPUtils.h</string>
-			<key>path</key>
-			<string>Amplitude/AMPUtils.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>15968EDE9796FDEECBBD22E2A1942A9F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
+			<key>buildConfigurationList</key>
+			<string>2AFF1AECBAF24EBDBE6991B03C37A964</string>
+			<key>buildPhases</key>
 			<array>
-				<string>94AF71358DF1A035550FD9F5F418AFA2</string>
+				<string>47277E081388E75B572009B7359CF35B</string>
+				<string>A39382326A5C8A14F0CD08E97C13751C</string>
+				<string>E54DB8A8BF991F8C728EE6A0CFF555E9</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>81F779E9D12181C8EBA7163078CF88ED</string>
 			</array>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>178D09A8F7B47F5EBECA855537E46AD7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B8190F551E23A1CF0656BC40787258A5</string>
-				<string>4F173AF5153B018F7710BDB4D589D65C</string>
-				<string>7171C791A16FFD4CCE48D981A7A31909</string>
-				<string>D74B045942456EA49A376855428811FB</string>
-				<string>65137086DD1B0C77399A1BB95408CBBB</string>
-				<string>DB6B282D397A074771110325E84F696B</string>
-				<string>D1EFCE08B85334B4204823C3EBDE05EA</string>
-				<string>FF928EF01122A5174614DE25AED1EE95</string>
-				<string>C741E5202D554809D8D14CCE2C997A43</string>
-				<string>CE697CF917A0701A9AFD57611A711C34</string>
-				<string>8898493D731910E0744A6E181E7A55AC</string>
-				<string>B2297ED1E676B5D1EED365500AEB0F15</string>
-				<string>C1089C37F6302BCFEB78C95EF23E763B</string>
-				<string>450D80B3E06DAB2E80AD168A712BCBAD</string>
-				<string>48DA1212880CFD6F53FAE5215EBF2FFA</string>
-				<string>CA93D1099A6DBE3E469882A58C2C8597</string>
-				<string>AF9D9D1CE84B4D21CB3506D8283E1DEE</string>
-				<string>E61D341318121E5B7634888AFA67CD8C</string>
-				<string>158B0E82BDA5BAAF237CFB25510479D3</string>
-				<string>AD905B34D3B940134541AD4DD7F4C10A</string>
-				<string>5651CE9F4524D4F40F4546801CF8F8E6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>Amplitude-iOS</string>
-			<key>path</key>
-			<string>Amplitude-iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1C353E93A191F52C52EDF23F14FC1F4E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>65137086DD1B0C77399A1BB95408CBBB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
+			<string>Pods-iOStoPOSExample</string>
+			<key>productName</key>
+			<string>Pods-iOStoPOSExample</string>
+			<key>productReference</key>
+			<string>2B1412C598C4434DDB3993C068E16E6B</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
 		</dict>
 		<key>1E7623B9420C3E71FAE3287C0CECA040</key>
 		<dict>
 			<key>fileRef</key>
-			<string>889EDA4024336BFD53BCBA1C88081F6E</string>
+			<string>EA7EF56646DB1B2F653740B0FB77850B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -164,21 +182,35 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>25DBF4CF9F9633B43FBB1FE9DEFADD59</key>
+		<key>2A189B585250CB6AD129135D3F9DA7A5</key>
 		<dict>
-			<key>fileRef</key>
-			<string>B2297ED1E676B5D1EED365500AEB0F15</string>
+			<key>children</key>
+			<array>
+				<string>8FF7F4154A8D8B8CE4A31DE65645A7A7</string>
+				<string>2B1412C598C4434DDB3993C068E16E6B</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>297267A30CAA46DF839DA4F722D5AE2C</key>
+		<key>2AFF1AECBAF24EBDBE6991B03C37A964</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>5246375E54E0F9E87BE545DFD176491E</string>
+				<string>0BFC23BE6A8B542B2AAC08F5788BDF32</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2B1412C598C4434DDB3993C068E16E6B</key>
 		<dict>
 			<key>explicitFileType</key>
 			<string>wrapper.framework</string>
@@ -187,25 +219,11 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>Amplitude_iOS.framework</string>
+			<string>Pods_iOStoPOSExample.framework</string>
 			<key>path</key>
-			<string>Amplitude_iOS.framework</string>
+			<string>Pods_iOStoPOSExample.framework</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>2C9FAB43FD5FC89EE2F7459EC6ADEA7C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98774BA51C8606E108359A06BC70AEAC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
 		<dict>
@@ -235,33 +253,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>313B66E1053ACBDDEBCE3B504D162519</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>MBProgressHUD.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>338480F83D9D2367CA8D4FEC45AA23EB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1089C37F6302BCFEB78C95EF23E763B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>36C06A02A00144C64CD7282BA31846BD</key>
 		<dict>
 			<key>children</key>
@@ -276,40 +267,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>38F45E953479E8F60F200C3306DC406A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>60F8F1C8BFF1E494F103B49457636AED</string>
-				<string>FD6440D0821A8E549D402EE81550778B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>394489F8296CE05C2C907F8057502F3C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F69E15D020999CF7AD2445F26ABCE7F6</string>
-				<string>A925D539DDA564ECDDFB01695E1ABC65</string>
-				<string>3DF477FC4A7675A94E19E732CD855189</string>
-				<string>499AC4453B2454637D85F9E9F602D4B5</string>
-				<string>BEB9FAA6B22B67677A3FBE711B18403C</string>
-				<string>4CB83CFB552363C14601C6A8B7935D93</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/MBProgressHUD</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>3B337DA8CFD3E3EC97473CC66FA2DA69</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -320,19 +277,6 @@
 			<string>text.script.sh</string>
 			<key>path</key>
 			<string>Pods-iOStoPOSExample-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3DF477FC4A7675A94E19E732CD855189</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>MBProgressHUD.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -356,268 +300,47 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>450D80B3E06DAB2E80AD168A712BCBAD</key>
+		<key>45F7B1ADFBAA5AD7174555013C33C5A8</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AMPLocationManagerDelegate.m</string>
 			<key>path</key>
-			<string>Amplitude/AMPLocationManagerDelegate.m</string>
+			<string>MBProgressHUD.modulemap</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>484911EAFDD15797378EB64DDB7C2ED0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>178D09A8F7B47F5EBECA855537E46AD7</string>
-				<string>646709FA65F73874A71D7A3C8481C042</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>485F9B9DDB7ED75489CAADFEFDF75DBC</key>
+		<key>47277E081388E75B572009B7359CF35B</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>AE8EB85CC2C2E13D01D00D77DDC9E491</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>48DA1212880CFD6F53FAE5215EBF2FFA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AMPRevenue.h</string>
-			<key>path</key>
-			<string>Amplitude/AMPRevenue.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>499AC4453B2454637D85F9E9F602D4B5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>MBProgressHUD-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>49F80BC31E446E7CE6B2877FB5DDAC47</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AF9D9D1CE84B4D21CB3506D8283E1DEE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>4B6F991DE4558BA251D15F9195AC33D8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EF6D8933DD8E0C2DF52452B11A4109A2</string>
-				<string>1C353E93A191F52C52EDF23F14FC1F4E</string>
-				<string>5B2A99F6A82807CA742B82678C5251B9</string>
-				<string>C2313F35867C95ED22880683E19D79B6</string>
-				<string>B2B590066E71C62503F5A1C1AB1DC165</string>
-				<string>D7F0B4CB644E1D9DD49D3994F19CED8E</string>
-				<string>D0E81252ED48FD2761820CC48A6DA559</string>
-				<string>E00C52CB7511D4EB5CF1BEC727FCEE7D</string>
-				<string>F0739E88E691160BA56BD4E255D344CA</string>
-				<string>B13F013E658F2437EC665539325CF512</string>
+				<string>A3D3524B822FC1449A3F4E66E44EE0AB</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>4BEA6C862518ED4230B6E727BCF9A688</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>F84841D908A35923EA22491496361156</string>
-				<string>FBF10321D9417F03DCA402389E41A0DF</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>4CB83CFB552363C14601C6A8B7935D93</key>
+		<key>4C1EE4B97D02463CB7C4D4F85F068867</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>MBProgressHUD-umbrella.h</string>
+			<string>MBProgressHUD.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4ECE3E7F064D9BF7E724DE75ABA22EFC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>158B0E82BDA5BAAF237CFB25510479D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>4F173AF5153B018F7710BDB4D589D65C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AMPConstants.h</string>
-			<key>path</key>
-			<string>Amplitude/AMPConstants.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5445AF561D48C660FC6D0A255A6BB6F7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D57B66680694F4DE1CBCC0F11C63F0D2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5651CE9F4524D4F40F4546801CF8F8E6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D7DF4A8639ECCFD71A539E56FC9A80DC</string>
-				<string>9721E6B42467519EA53B4E63BE0485D0</string>
-				<string>E8D9EBAEB84A96D01F18C2F62FE3EBFA</string>
-				<string>BD64BAF3D047476084F5BB2606CCE25B</string>
-				<string>98774BA51C8606E108359A06BC70AEAC</string>
-				<string>845050AC453214577116561442AFC2D9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Amplitude-iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5A6DCDF61F46683AE1CE24E4F1959907</key>
-		<dict>
-			<key>fileRef</key>
-			<string>48DA1212880CFD6F53FAE5215EBF2FFA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>5B2A99F6A82807CA742B82678C5251B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D1EFCE08B85334B4204823C3EBDE05EA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>5B80B327E4F67F37FC47C9FB06E2170B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_iOStoPOSExample.framework</string>
-			<key>path</key>
-			<string>Pods_iOStoPOSExample.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5C1112191DA6CA84D979612E3426D795</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>4BEA6C862518ED4230B6E727BCF9A688</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F2057D1567CE47AF18F7E0A3ED9CFCD4</string>
-				<string>485F9B9DDB7ED75489CAADFEFDF75DBC</string>
-				<string>9F515A8064FA4AEAE645203B06F1772E</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>932AEA1A3D6AF2D328335502930DC25E</string>
-				<string>7CCCCD69D6D13FD76A006740A085E616</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-iOStoPOSExample</string>
-			<key>productName</key>
-			<string>Pods-iOStoPOSExample</string>
-			<key>productReference</key>
-			<string>5B80B327E4F67F37FC47C9FB06E2170B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>60F8F1C8BFF1E494F103B49457636AED</key>
+		<key>5246375E54E0F9E87BE545DFD176491E</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>9721E6B42467519EA53B4E63BE0485D0</string>
+			<string>794740E642DF3CE6ABE9C4B3C3FBA32E</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ARCHS</key>
@@ -638,10 +361,8 @@
 				<string>@rpath</string>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
 				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Amplitude-iOS/Amplitude-iOS-prefix.pch</string>
 				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Amplitude-iOS/Info.plist</string>
+				<string>Target Support Files/Pods-iOStoPOSExample/Info.plist</string>
 				<key>INSTALL_PATH</key>
 				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
@@ -652,12 +373,20 @@
 					<string>@executable_path/Frameworks</string>
 					<string>@loader_path/Frameworks</string>
 				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
 				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Amplitude-iOS/Amplitude-iOS.modulemap</string>
+				<string>Target Support Files/Pods-iOStoPOSExample/Pods-iOStoPOSExample.modulemap</string>
 				<key>MTL_ENABLE_DEBUG_INFO</key>
 				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
 				<key>PRODUCT_NAME</key>
-				<string>Amplitude_iOS</string>
+				<string>Pods_iOStoPOSExample</string>
 				<key>SDKROOT</key>
 				<string>iphoneos</string>
 				<key>SKIP_INSTALL</key>
@@ -674,21 +403,20 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>631615B38A03FAC8201B48EE400CE123</key>
+		<key>5836A44A75C427EBF4739C55E2315758</key>
 		<dict>
-			<key>fileRef</key>
-			<string>4F173AF5153B018F7710BDB4D589D65C</string>
+			<key>children</key>
+			<array>
+				<string>9841862FE02BD09196B31E3026B4325C</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>63CDBE9DE0FF0907751B44B0803D441F</key>
+		<key>63F54DBDA29AAAC833953DA9AA3A93C5</key>
 		<dict>
 			<key>containerPortal</key>
 			<string>D41D8CD98F00B204E9800998ECF8427E</string>
@@ -700,23 +428,6 @@
 			<string>E61CE3B6DFA1FE6B3E296965C76C0E10</string>
 			<key>remoteInfo</key>
 			<string>MBProgressHUD</string>
-		</dict>
-		<key>646709FA65F73874A71D7A3C8481C042</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>889EDA4024336BFD53BCBA1C88081F6E</string>
-				<string>313B66E1053ACBDDEBCE3B504D162519</string>
-				<string>394489F8296CE05C2C907F8057502F3C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>MBProgressHUD</string>
-			<key>path</key>
-			<string>MBProgressHUD</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6488DB2C9BB99C53077D390CE673DD56</key>
 		<dict>
@@ -732,36 +443,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>65137086DD1B0C77399A1BB95408CBBB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AMPDatabaseHelper.m</string>
-			<key>path</key>
-			<string>Amplitude/AMPDatabaseHelper.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6678097B6903F6A13103871B57943C0B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MBProgressHUD.framework</string>
-			<key>path</key>
-			<string>MBProgressHUD.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
 		<key>68BAE99A52FA368BFD1128D7AFAAAF9A</key>
 		<dict>
 			<key>children</key>
@@ -774,20 +455,6 @@
 			<string>Targets Support Files</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6CBB29FDAD684108810309CA803A8A71</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D74B045942456EA49A376855428811FB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>6E093D627869B650AB8D6411D2DE6B7A</key>
 		<dict>
@@ -805,7 +472,7 @@
 		<key>6E456B11B33A5419BDBDE271D6C94D80</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>3DF477FC4A7675A94E19E732CD855189</string>
+			<string>4C1EE4B97D02463CB7C4D4F85F068867</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ARCHS</key>
@@ -873,21 +540,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7171C791A16FFD4CCE48D981A7A31909</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AMPConstants.m</string>
-			<key>path</key>
-			<string>Amplitude/AMPConstants.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>7223F2D78A55A3B6DF2F4C9373E140BC</key>
 		<dict>
 			<key>fileRef</key>
@@ -908,20 +560,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7BACEED1710F932A8F7DEC9F53B514B0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9E569FC02DCD1D0104B74CF2DB956E8B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>7C9496FF125B60FD5C5B455050225817</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -935,7 +573,22 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7CCCCD69D6D13FD76A006740A085E616</key>
+		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
+				<string>433CD3331B6C3787F473C941B61FC68F</string>
+				<string>5836A44A75C427EBF4739C55E2315758</string>
+				<string>2A189B585250CB6AD129135D3F9DA7A5</string>
+				<string>68BAE99A52FA368BFD1128D7AFAAAF9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>81F779E9D12181C8EBA7163078CF88ED</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXTargetDependency</string>
@@ -944,37 +597,23 @@
 			<key>target</key>
 			<string>E61CE3B6DFA1FE6B3E296965C76C0E10</string>
 			<key>targetProxy</key>
-			<string>63CDBE9DE0FF0907751B44B0803D441F</string>
+			<string>63F54DBDA29AAAC833953DA9AA3A93C5</string>
 		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<key>8CC00D0082DABE161ACDD5D8E3AB9F4F</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>433CD3331B6C3787F473C941B61FC68F</string>
-				<string>484911EAFDD15797378EB64DDB7C2ED0</string>
-				<string>E0A0C5C6AF36558167C7904295DB5908</string>
-				<string>68BAE99A52FA368BFD1128D7AFAAAF9A</string>
-			</array>
+			<key>fileRef</key>
+			<string>9E569FC02DCD1D0104B74CF2DB956E8B</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>845050AC453214577116561442AFC2D9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8898493D731910E0744A6E181E7A55AC</key>
+		<key>8CC88E9BB2DAE98E2B831183A06BFB8C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -982,108 +621,40 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MBProgressHUD.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8FF7F4154A8D8B8CE4A31DE65645A7A7</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>Amplitude.m</string>
+			<string>MBProgressHUD.framework</string>
 			<key>path</key>
-			<string>Amplitude/Amplitude.m</string>
+			<string>MBProgressHUD.framework</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>889EDA4024336BFD53BCBA1C88081F6E</key>
+		<key>9841862FE02BD09196B31E3026B4325C</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>EA7EF56646DB1B2F653740B0FB77850B</string>
+				<string>8CC88E9BB2DAE98E2B831183A06BFB8C</string>
+				<string>A965BDBE5FC4856535619D751B2F0F38</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MBProgressHUD.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8B23960EAF4351E069CE7068796D1633</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DB6B282D397A074771110325E84F696B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>8CC3994729B673641DBCEFE0DED764AF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B8190F551E23A1CF0656BC40787258A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>8CDA4862C4E3D011C8236BD21EC326AC</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>D0D40407305DCB9BDAF75638A9B1B153</string>
-			<key>remoteInfo</key>
-			<string>Amplitude-iOS</string>
-		</dict>
-		<key>932AEA1A3D6AF2D328335502930DC25E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Amplitude-iOS</string>
-			<key>target</key>
-			<string>D0D40407305DCB9BDAF75638A9B1B153</string>
-			<key>targetProxy</key>
-			<string>8CDA4862C4E3D011C8236BD21EC326AC</string>
-		</dict>
-		<key>94AF71358DF1A035550FD9F5F418AFA2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6E093D627869B650AB8D6411D2DE6B7A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9721E6B42467519EA53B4E63BE0485D0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
+			<string>MBProgressHUD</string>
 			<key>path</key>
-			<string>Amplitude-iOS.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>98774BA51C8606E108359A06BC70AEAC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Amplitude-iOS-umbrella.h</string>
+			<string>MBProgressHUD</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1103,7 +674,7 @@
 		<key>9E17CC11959A1FE5566CE528047ACDC0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>313B66E1053ACBDDEBCE3B504D162519</string>
+			<string>8CC88E9BB2DAE98E2B831183A06BFB8C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1139,19 +710,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>9F515A8064FA4AEAE645203B06F1772E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7BACEED1710F932A8F7DEC9F53B514B0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>A292EF9F0FB6C0CD104273AA088F7C11</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1165,18 +723,60 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A925D539DDA564ECDDFB01695E1ABC65</key>
+		<key>A39382326A5C8A14F0CD08E97C13751C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E666F528A562125824984379BFD5B8F2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A3D3524B822FC1449A3F4E66E44EE0AB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D57B66680694F4DE1CBCC0F11C63F0D2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A83C101219E7ED4222CD65BCE24B0A5E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>MBProgressHUD.modulemap</string>
+			<string>MBProgressHUD-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>AD905B34D3B940134541AD4DD7F4C10A</key>
+		<key>A965BDBE5FC4856535619D751B2F0F38</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DD71A7E2391B90C816D7330BB6B999E4</string>
+				<string>45F7B1ADFBAA5AD7174555013C33C5A8</string>
+				<string>4C1EE4B97D02463CB7C4D4F85F068867</string>
+				<string>B46DBFF3A36C2A3BFA5CD06A1960E97F</string>
+				<string>F561804416163A2E5EFC23029D9BD9A3</string>
+				<string>A83C101219E7ED4222CD65BCE24B0A5E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/MBProgressHUD</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B46DBFF3A36C2A3BFA5CD06A1960E97F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1184,81 +784,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AMPUtils.m</string>
 			<key>path</key>
-			<string>Amplitude/AMPUtils.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AE8EB85CC2C2E13D01D00D77DDC9E491</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6E093D627869B650AB8D6411D2DE6B7A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AF9D9D1CE84B4D21CB3506D8283E1DEE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AMPURLConnection.h</string>
-			<key>path</key>
-			<string>Amplitude/AMPURLConnection.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B13F013E658F2437EC665539325CF512</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AD905B34D3B940134541AD4DD7F4C10A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>B2297ED1E676B5D1EED365500AEB0F15</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Amplitude+SSLPinning.h</string>
-			<key>path</key>
-			<string>Amplitude/Amplitude+SSLPinning.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B2B590066E71C62503F5A1C1AB1DC165</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E8D9EBAEB84A96D01F18C2F62FE3EBFA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B8190F551E23A1CF0656BC40787258A5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AMPARCMacros.h</string>
-			<key>path</key>
-			<string>Amplitude/AMPARCMacros.h</string>
+			<string>MBProgressHUD-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1282,49 +809,9 @@
 		<key>BB010EE04BA829E196554A00A951AA7C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>499AC4453B2454637D85F9E9F602D4B5</string>
+			<string>B46DBFF3A36C2A3BFA5CD06A1960E97F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD64BAF3D047476084F5BB2606CCE25B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Amplitude-iOS-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BEB9FAA6B22B67677A3FBE711B18403C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MBProgressHUD-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF2924432E3195061477B04258E018D3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CE697CF917A0701A9AFD57611A711C34</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>C074F63C9EE7CB4D8C618390A32CEC35</key>
 		<dict>
@@ -1399,37 +886,10 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>C1089C37F6302BCFEB78C95EF23E763B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AMPLocationManagerDelegate.h</string>
-			<key>path</key>
-			<string>Amplitude/AMPLocationManagerDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C2313F35867C95ED22880683E19D79B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C741E5202D554809D8D14CCE2C997A43</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
 		<key>C46098167B67CC086B10F95FA0BEC69C</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>3DF477FC4A7675A94E19E732CD855189</string>
+			<string>4C1EE4B97D02463CB7C4D4F85F068867</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ARCHS</key>
@@ -1486,117 +946,6 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>C741E5202D554809D8D14CCE2C997A43</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AMPIdentify.m</string>
-			<key>path</key>
-			<string>Amplitude/AMPIdentify.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C9CA7C10959D4CF6FBA4F37FE9BCCE2A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FF928EF01122A5174614DE25AED1EE95</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>CA93D1099A6DBE3E469882A58C2C8597</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AMPRevenue.m</string>
-			<key>path</key>
-			<string>Amplitude/AMPRevenue.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CE697CF917A0701A9AFD57611A711C34</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Amplitude.h</string>
-			<key>path</key>
-			<string>Amplitude/Amplitude.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D0D40407305DCB9BDAF75638A9B1B153</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>38F45E953479E8F60F200C3306DC406A</string>
-			<key>buildPhases</key>
-			<array>
-				<string>4B6F991DE4558BA251D15F9195AC33D8</string>
-				<string>15968EDE9796FDEECBBD22E2A1942A9F</string>
-				<string>DCCE037BF6A516FC508DEDF7CAB23D68</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Amplitude-iOS</string>
-			<key>productName</key>
-			<string>Amplitude-iOS</string>
-			<key>productReference</key>
-			<string>297267A30CAA46DF839DA4F722D5AE2C</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>D0E81252ED48FD2761820CC48A6DA559</key>
-		<dict>
-			<key>fileRef</key>
-			<string>450D80B3E06DAB2E80AD168A712BCBAD</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>D1EFCE08B85334B4204823C3EBDE05EA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AMPDeviceInfo.m</string>
-			<key>path</key>
-			<string>Amplitude/AMPDeviceInfo.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>D41D8CD98F00B204E9800998ECF8427E</key>
 		<dict>
 			<key>attributes</key>
@@ -1623,7 +972,7 @@
 			<key>mainGroup</key>
 			<string>7DB346D0F39D3F0E887471402A8071AB</string>
 			<key>productRefGroup</key>
-			<string>E0A0C5C6AF36558167C7904295DB5908</string>
+			<string>2A189B585250CB6AD129135D3F9DA7A5</string>
 			<key>projectDirPath</key>
 			<string></string>
 			<key>projectReferences</key>
@@ -1632,9 +981,8 @@
 			<string></string>
 			<key>targets</key>
 			<array>
-				<string>D0D40407305DCB9BDAF75638A9B1B153</string>
 				<string>E61CE3B6DFA1FE6B3E296965C76C0E10</string>
-				<string>5C1112191DA6CA84D979612E3426D795</string>
+				<string>17AC5A268222DB82A9D5A93966C35F0E</string>
 			</array>
 		</dict>
 		<key>D57B66680694F4DE1CBCC0F11C63F0D2</key>
@@ -1650,107 +998,16 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D74B045942456EA49A376855428811FB</key>
+		<key>DD71A7E2391B90C816D7330BB6B999E4</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AMPDatabaseHelper.h</string>
+			<string>text.plist.xml</string>
 			<key>path</key>
-			<string>Amplitude/AMPDatabaseHelper.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D7DF4A8639ECCFD71A539E56FC9A80DC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Amplitude-iOS.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D7F0B4CB644E1D9DD49D3994F19CED8E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8898493D731910E0744A6E181E7A55AC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>DB6B282D397A074771110325E84F696B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AMPDeviceInfo.h</string>
-			<key>path</key>
-			<string>Amplitude/AMPDeviceInfo.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DCCE037BF6A516FC508DEDF7CAB23D68</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8CC3994729B673641DBCEFE0DED764AF</string>
-				<string>631615B38A03FAC8201B48EE400CE123</string>
-				<string>6CBB29FDAD684108810309CA803A8A71</string>
-				<string>8B23960EAF4351E069CE7068796D1633</string>
-				<string>C9CA7C10959D4CF6FBA4F37FE9BCCE2A</string>
-				<string>25DBF4CF9F9633B43FBB1FE9DEFADD59</string>
-				<string>2C9FAB43FD5FC89EE2F7459EC6ADEA7C</string>
-				<string>BF2924432E3195061477B04258E018D3</string>
-				<string>338480F83D9D2367CA8D4FEC45AA23EB</string>
-				<string>5A6DCDF61F46683AE1CE24E4F1959907</string>
-				<string>49F80BC31E446E7CE6B2877FB5DDAC47</string>
-				<string>4ECE3E7F064D9BF7E724DE75ABA22EFC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E00C52CB7511D4EB5CF1BEC727FCEE7D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CA93D1099A6DBE3E469882A58C2C8597</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>E0A0C5C6AF36558167C7904295DB5908</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>297267A30CAA46DF839DA4F722D5AE2C</string>
-				<string>6678097B6903F6A13103871B57943C0B</string>
-				<string>5B80B327E4F67F37FC47C9FB06E2170B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
+			<string>Info.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1822,6 +1079,19 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
+		<key>E54DB8A8BF991F8C728EE6A0CFF555E9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>8CC00D0082DABE161ACDD5D8E3AB9F4F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>E61CE3B6DFA1FE6B3E296965C76C0E10</key>
 		<dict>
 			<key>buildConfigurationList</key>
@@ -1843,24 +1113,16 @@
 			<key>productName</key>
 			<string>MBProgressHUD</string>
 			<key>productReference</key>
-			<string>6678097B6903F6A13103871B57943C0B</string>
+			<string>8FF7F4154A8D8B8CE4A31DE65645A7A7</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
-		<key>E61D341318121E5B7634888AFA67CD8C</key>
+		<key>E666F528A562125824984379BFD5B8F2</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>6E093D627869B650AB8D6411D2DE6B7A</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AMPURLConnection.m</string>
-			<key>path</key>
-			<string>Amplitude/AMPURLConnection.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>E697E18C6AB599A02CCF55262F86A3FE</key>
 		<dict>
@@ -1875,55 +1137,31 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E8D9EBAEB84A96D01F18C2F62FE3EBFA</key>
+		<key>EA7EF56646DB1B2F653740B0FB77850B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>Amplitude-iOS-dummy.m</string>
+			<string>MBProgressHUD.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EF6D8933DD8E0C2DF52452B11A4109A2</key>
+		<key>F561804416163A2E5EFC23029D9BD9A3</key>
 		<dict>
-			<key>fileRef</key>
-			<string>7171C791A16FFD4CCE48D981A7A31909</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>F0739E88E691160BA56BD4E255D344CA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E61D341318121E5B7634888AFA67CD8C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>F2057D1567CE47AF18F7E0A3ED9CFCD4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5445AF561D48C660FC6D0A255A6BB6F7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MBProgressHUD-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>F5CBAFC5BE36D97822F4984FCB042160</key>
 		<dict>
@@ -1935,226 +1173,6 @@
 			<string>text.script.sh</string>
 			<key>path</key>
 			<string>Pods-iOStoPOSExample-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F69E15D020999CF7AD2445F26ABCE7F6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F84841D908A35923EA22491496361156</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>794740E642DF3CE6ABE9C4B3C3FBA32E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<array>
-					<string>$(ARCHS_STANDARD_64_BIT)</string>
-				</array>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-iOStoPOSExample/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.1</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-iOStoPOSExample/Pods-iOStoPOSExample.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_iOStoPOSExample</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>FBF10321D9417F03DCA402389E41A0DF</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>7C9496FF125B60FD5C5B455050225817</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<array>
-					<string>$(ARCHS_STANDARD_64_BIT)</string>
-				</array>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-iOStoPOSExample/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.1</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-iOStoPOSExample/Pods-iOStoPOSExample.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_iOStoPOSExample</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>FD6440D0821A8E549D402EE81550778B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>9721E6B42467519EA53B4E63BE0485D0</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<array>
-					<string>$(ARCHS_STANDARD_64_BIT)</string>
-				</array>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Amplitude-iOS/Amplitude-iOS-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Amplitude-iOS/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.1</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Amplitude-iOS/Amplitude-iOS.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>Amplitude_iOS</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>FF928EF01122A5174614DE25AED1EE95</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AMPIdentify.h</string>
-			<key>path</key>
-			<string>Amplitude/AMPIdentify.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

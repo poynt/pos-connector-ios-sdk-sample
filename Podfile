@@ -5,7 +5,7 @@
 
 target 'iOStoPOSExample' do
     pod 'MBProgressHUD', '~> 0.9.2'
-    pod 'Amplitude-iOS'
+
 end
 
 target 'iOStoPOSExampleTests' do
