@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/PoyntLib-Swift.h</key>
 		<data>
-		ylMjMwq+ubgJWkgWZPCy1Y2RsJ8=
+		DirfLGrDjFF/dk2wuibyMONxWUM=
 		</data>
 		<key>Headers/PoyntLib.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/PoyntLib.swiftmodule/arm.swiftdoc</key>
 		<data>
-		U66tKU6y1VzI3Pnok8uzieLOAuc=
+		t2bmqtF6oLl4/F81JAJP7Bm6CNk=
 		</data>
 		<key>Modules/PoyntLib.swiftmodule/arm.swiftmodule</key>
 		<data>
-		xiYKJX4nNI2urLrkDZq04jivgZE=
+		twXLkjDGmpyxx9HWlf/VdWM3kXg=
 		</data>
 		<key>Modules/PoyntLib.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/PoyntLib.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		ycobJrgTJ87I4KKdVoV6Ju7fYoM=
+		5FDvV+Qmt6GC3GM12c+1GJEjSO4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,11 +43,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ylMjMwq+ubgJWkgWZPCy1Y2RsJ8=
+			DirfLGrDjFF/dk2wuibyMONxWUM=
 			</data>
 			<key>hash2</key>
 			<data>
-			InusLDYJfVHRc1Pay0QAFQ6FVx0FzEXUhL8Lm2KoFPE=
+			N5Zw4aNoiLie9iZyN4Kk3ppAC0vcpm81ibr7oy31hKE=
 			</data>
 		</dict>
 		<key>Headers/PoyntLib.h</key>
@@ -65,22 +65,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			U66tKU6y1VzI3Pnok8uzieLOAuc=
+			t2bmqtF6oLl4/F81JAJP7Bm6CNk=
 			</data>
 			<key>hash2</key>
 			<data>
-			g7adlg4C+r4GCm8a+bSxDtwG+YNvrAg+3usGQGmN3R8=
+			MEXEAoHCSXkEjFiS05wcqtPmAQQKZi/YV6/rgyRJPeU=
 			</data>
 		</dict>
 		<key>Modules/PoyntLib.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xiYKJX4nNI2urLrkDZq04jivgZE=
+			twXLkjDGmpyxx9HWlf/VdWM3kXg=
 			</data>
 			<key>hash2</key>
 			<data>
-			rqKP5B9Daq/mYg++j589lm4fwjmFzn0ESFPrC/6e6bs=
+			7vcOtKm/x35Oj3LWosIV3ppiEzYV3QZNVlDzojmySus=
 			</data>
 		</dict>
 		<key>Modules/PoyntLib.swiftmodule/arm64.swiftdoc</key>
@@ -98,11 +98,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ycobJrgTJ87I4KKdVoV6Ju7fYoM=
+			5FDvV+Qmt6GC3GM12c+1GJEjSO4=
 			</data>
 			<key>hash2</key>
 			<data>
-			XoXaYRwf5jkhg9Vhi2KuJotPZwoKsSbUtSpKToF/nfs=
+			rsJtKpfWf6VAbydpfOhHR45mvXryc3aiJ5Klf+BCdJ0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

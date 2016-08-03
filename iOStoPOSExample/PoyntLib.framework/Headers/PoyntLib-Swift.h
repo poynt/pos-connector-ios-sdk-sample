@@ -185,8 +185,8 @@ SWIFT_CLASS("_TtC8PoyntLib25PoyntPOSConnectionManager")
 @property (nonatomic, copy) void (^ _Nullable onTransactionResponse)(PoyntTransactionResponseObject * _Nonnull data, NSInteger type);
 @property (nonatomic, copy) NSString * _Nonnull pairingCode;
 @property (nonatomic, copy) NSString * _Nonnull url;
-@property (nonatomic, readonly) BOOL paired;
 @property (nonatomic, copy) NSString * _Nonnull clientName;
+@property (nonatomic, readonly) BOOL paired;
 @property (nonatomic) NSInteger timeout;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)authorizeSales:(PoyntPaymentObject * _Nonnull)paymentObject;
