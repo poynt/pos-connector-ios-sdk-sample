@@ -46,12 +46,15 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         self.setupDefaultUI()
         self.setupPaymentManager()
         self.tfCode.text = self.paymentManager.pairingCode
+        self.tfIP.text = self.paymentManager.url
 
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        if(self.paymentManager.url == nil && !self.selectingTerminal && self.initialLoad){
+//        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+
+        if(!self.paymentManager.paired && self.initialLoad){
             self.initialLoad = false
             self.selectingTerminal = true
             self.performSegueWithIdentifier("segueDiscovery", sender: self)
@@ -78,7 +81,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
 
 
                         print("\(#function)\r\nselected terminals ---> \(terminal)")
-                        print("\(#function)\r\nurl for requests: ---> \(self.paymentManager.url!)")
+                        print("\(#function)\r\nurl for requests: ---> \(self.paymentManager.url)")
                     }
 
                 }
@@ -132,6 +135,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
     }
 
     func setupDefaultUI() {
+//        self.btnPair.setTitle("Pair", forState: .Normal)
         self.textViewResponse.text = ""
         self.bottomContainer.hidden = true
 
@@ -233,7 +237,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
     }
 
     func setupPaymentManager() {
-
+        
         self.paymentManager.clientName = "Ralph"
         self.paymentManager.timeout = 30000 // 30 seconds
 
@@ -256,6 +260,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         paymentManager.onTransactionResponse = {(obj:PoyntTransactionResponseObject,type:Int) -> Void in
             MBProgressHUD.hideHUDForView(self.view, animated: true)
             print("\(#function)\r\nreceived response for \(type) ---> \(obj)")
+
             if let json = obj.rawJson as AnyObject?{
                 let transIds = obj.transactions.map({
                     "id: \($0.transactionId ?? "")"
@@ -271,6 +276,11 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             var capture: UIAlertAction?
             if obj.status == "COMPLETED" || obj.status == "SUCCESS"{
                 self.bottomContainer.hidden = false
+                if type == PoyntActionType.AuthorizePair.rawValue {
+                    self.dismissViewControllerAnimated(false, completion: nil)
+                    self.btnPair.setTitle("Device is Paired", forState: .Normal)
+                    self.btnPair.backgroundColor = UIColor.lightGrayColor()
+                }
                 if type == PoyntActionType.AuthorizeSales.rawValue || type == PoyntActionType.AuthorizePreSales.rawValue {
                     refund = UIAlertAction(title: "Void", style: .Destructive, handler: { (action) in
                         if let transaction = obj.transactions.first as PoyntTransactionObject? {
@@ -324,19 +334,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         let code = self.tfCode.text!        
         self.paymentManager.pairingCode = code;
         self.paymentManager.url = self.tfIP.text!;
-        if self.paymentManager.url == nil {
-            let alert = UIAlertController(title: "Terminal Unspecified", message: "You have not specified a terminal to which you will send this transaction. Would you like to select one now?", preferredStyle: .Alert)
-            let cancel = UIAlertAction(title: "Cancel", style: .Default, handler: { (action) in
-
-            })
-            alert.addAction(cancel)
-            let ok = UIAlertAction(title: "Let's do it.", style: .Default, handler: { (action) in
-                self.performSegueWithIdentifier("segueDiscovery", sender: self)
-            })
-            alert.addAction(ok)
-            self.presentViewController(alert, animated: true, completion: nil)
-            return
-        }
+        
         if(btn == self.btnSale){
             self.poyntAction(.AuthorizeSales, transaction: payment)
         }
