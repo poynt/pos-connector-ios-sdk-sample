@@ -103,6 +103,17 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 @interface NSData (SWIFT_EXTENSION(PoyntLib))
 @end
 
+typedef SWIFT_ENUM(NSInteger, PoyntActionType) {
+  PoyntActionTypeUndefined = 0,
+  PoyntActionTypeAuthorizeSales = 1,
+  PoyntActionTypeAuthorizeVoid = 2,
+  PoyntActionTypeAuthorizeRefund = 3,
+  PoyntActionTypeAuthorizePair = 4,
+  PoyntActionTypeAuthorizePreSales = 5,
+  PoyntActionTypeAuthorizeVoidPreSales = 6,
+  PoyntActionTypeAuthorizeCapture = 7,
+};
+
 
 SWIFT_CLASS("_TtC8PoyntLib15PoyntCardObject")
 @interface PoyntCardObject : NSObject
@@ -182,7 +193,7 @@ SWIFT_CLASS("_TtC8PoyntLib16PoyntOrderObject")
 SWIFT_CLASS("_TtC8PoyntLib25PoyntPOSConnectionManager")
 @interface PoyntPOSConnectionManager : NSObject <NSURLSessionTaskDelegate, NSURLSessionDelegate>
 @property (nonatomic, copy) void (^ _Nullable onError)(NSError * _Nonnull error);
-@property (nonatomic, copy) void (^ _Nullable onTransactionResponse)(PoyntTransactionResponseObject * _Nonnull data, NSInteger type);
+@property (nonatomic, copy) void (^ _Nullable onTransactionResponse)(PoyntTransactionResponseObject * _Nonnull data, enum PoyntActionType type);
 @property (nonatomic, copy) NSString * _Nonnull pairingCode;
 @property (nonatomic, copy) NSString * _Nonnull url;
 @property (nonatomic, copy) NSString * _Nonnull clientName;
@@ -190,10 +201,10 @@ SWIFT_CLASS("_TtC8PoyntLib25PoyntPOSConnectionManager")
 @property (nonatomic) NSInteger timeout;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)authorizeSales:(PoyntPaymentObject * _Nonnull)paymentObject;
+- (void)authorizePreSales:(PoyntPaymentObject * _Nonnull)paymentObject;
 - (void)authorizeVoidPreSales:(PoyntTransactionObject * _Nonnull)transaction;
 - (void)authorizeVoid:(PoyntTransactionObject * _Nonnull)transaction;
 - (void)authorizeRefund:(PoyntTransactionObject * _Nonnull)transaction;
-- (void)authorizePreSales:(PoyntPaymentObject * _Nonnull)paymentObject;
 - (void)authorizePairing:(NSString * _Nonnull)code;
 - (void)authorizeCapture:(PoyntTransactionObject * _Nonnull)transaction;
 - (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
