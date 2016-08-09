@@ -108,8 +108,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
 
         //set up a payment transaction object to hold our items
         payment.currency = "USD"
-        payment.tipAmount = 0
-        payment.authzOnly = true
+        payment.tipAmount = 0        
         payment.disableTip = false
         payment.multiTender = false
 
