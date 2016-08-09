@@ -149,13 +149,13 @@ SWIFT_CLASS("_TtC8PoyntLib18PoyntFundingSource")
 
 SWIFT_CLASS("_TtC8PoyntLib20PoyntOrderItemObject")
 @interface PoyntOrderItemObject : NSObject
-@property (nonatomic, copy) NSString * _Nullable sku;
 @property (nonatomic, copy) NSString * _Nullable clientNotes;
-@property (nonatomic, copy) NSString * _Nullable status;
-@property (nonatomic, copy) NSString * _Nullable name;
-@property (nonatomic) NSInteger unitPrice;
-@property (nonatomic, copy) NSArray<PoyntOrderItemTax *> * _Nullable taxes;
 @property (nonatomic, copy) NSArray<PoyntDiscountObject *> * _Nullable discounts;
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic, copy) NSString * _Nullable sku;
+@property (nonatomic, copy) NSString * _Nullable status;
+@property (nonatomic, copy) NSArray<PoyntOrderItemTax *> * _Nullable taxes;
+@property (nonatomic) NSInteger unitPrice;
 @property (nonatomic) float quantity;
 @property (nonatomic, readonly) NSInteger tax;
 @end
@@ -227,13 +227,22 @@ SWIFT_CLASS("_TtC8PoyntLib24PoyntPaymentAmountObject")
 
 SWIFT_CLASS("_TtC8PoyntLib18PoyntPaymentObject")
 @interface PoyntPaymentObject : NSObject
-@property (nonatomic, copy) NSString * _Nonnull referenceId;
 @property (nonatomic) NSInteger amount;
-@property (nonatomic) NSInteger tipAmount;
 @property (nonatomic, strong) PoyntPaymentAmountObject * _Nullable amounts;
+@property (nonatomic) NSInteger cashbackAmount;
+@property (nonatomic) BOOL cashOnly;
 @property (nonatomic, copy) NSString * _Nullable currency;
-@property (nonatomic, copy) NSString * _Nullable orderId;
+@property (nonatomic) BOOL debit;
+@property (nonatomic) BOOL disableCash;
+@property (nonatomic) BOOL disableDebitCards;
+@property (nonatomic) BOOL disableTip;
+@property (nonatomic) BOOL multiTender;
+@property (nonatomic) BOOL nonReferencedCredit;
 @property (nonatomic, strong) PoyntOrderObject * _Nullable order;
+@property (nonatomic, copy) NSString * _Nonnull orderId;
+@property (nonatomic, copy) NSString * _Nonnull referenceId;
+@property (nonatomic) BOOL skipReceipScreen;
+@property (nonatomic) NSInteger tipAmount;
 @property (nonatomic, copy) NSArray<PoyntTransactionObject *> * _Nullable transactions;
 - (void)update;
 @property (nonatomic, readonly) NSInteger absoluteDiscountTotal;
