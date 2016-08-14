@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PoyntSerializedObject.h"
+
 @class PoyntPaymentAmountObject;
 @interface PoyntOrderObject : NSObject <PoyntSerializedObject>
 @property(nonatomic,copy) NSString *notes;

@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 @class PoyntTerminal;
 typedef void(^OnTerminalsFound)(NSArray *terminal) ;
-@interface PoyntTerminalDiscover : NSObject
-@property(nonatomic,strong) NSNetServiceBrowser *serviceBrowser;
-@property(nonatomic,strong) NSArray* netServices;
+@interface PoyntTerminalDiscover : NSObject 
+
 @property(nonatomic,strong) NSArray *terminals;
 @property(nonatomic,copy) OnTerminalsFound onTerminalsFound;
 @property (nonatomic) BOOL searching;
