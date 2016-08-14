@@ -7,7 +7,8 @@
 //
 
 import XCTest
-import PoyntLib
+
+
 
 class TCPTestTests: XCTestCase {
     var discount : PoyntDiscountObject!

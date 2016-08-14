@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PoyntLib
 import MBProgressHUD
 
 class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate  {
@@ -41,12 +40,13 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        PoyntDebug.sharedDebugger.verbose = false
+//        PoyntDebug.sharedDebugger().verbose = false
         self.setupSamplePayment()
         self.setupDefaultUI()
         self.setupPaymentManager()
         self.tfCode.text = self.paymentManager.pairingCode
         self.tfIP.text = self.paymentManager.url
+
 
     }
 
@@ -115,11 +115,11 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         //add order object to the transaction
         payment.order = PoyntOrderObject()
         payment.order?.notes =  "i am a note"
-        //payment.order?.orderNumber = "#987as9f0a"
+        
 
         let item0 = PoyntOrderItemObject(sku: "testOrderItem_2", unitPrice: 100, quantity: 10.0)
         item0.name = "Drip Coffee"
-        item0.unitOfMeasure = .EACH
+        item0.unitOfMeasure = EACH
         item0.status = "ORDERED"
 
         //discount example
@@ -138,6 +138,104 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         self.textViewResponse.text = ""
         self.bottomContainer.hidden = true
 
+    }
+
+    func setupPaymentManager() {
+
+        self.paymentManager.clientName = "Ralph"
+        self.paymentManager.timeout = 30000 // 30 seconds
+
+        // change to false to remove logging in console
+        //        PoyntDebug.sharedDebugger().verbose = true
+
+
+        //...because nothing is perfect
+        paymentManager.onError = {(error) -> Void in
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
+            print("\(#function)\r\nerror for transaction ---> \(error)")
+
+            let alert = UIAlertController(title: "Erorr.", message: "There was an error. \(error.localizedDescription)", preferredStyle: .Alert)
+            let cancel = UIAlertAction(title: "ok", style: .Default, handler:nil)
+            alert.addAction(cancel)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+
+        //...gets a transaction object
+        paymentManager.onTransactionResponse = {(transactionObect ,apiType) -> Void in
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
+            if let obj = transactionObect as PoyntTransactionResponseObject?,
+                let type = apiType as Api?{
+                print("\(#function)\r\nreceived response for \(type) ---> \(obj)")
+
+                if let json = obj.rawJson as AnyObject?{
+                    let transIds = obj.transactions.map({
+                        "id: \($0.transactionId ?? "")"
+                    }).joinWithSeparator("\r\n")
+                    self.textViewResponse.text = "Transactions:\r\n\(transIds)\r\n\(json.description)"
+                }
+
+
+
+                var title = "Status: \(obj.status)"
+                var msg = " response details below."
+                var refund: UIAlertAction?
+                var capture: UIAlertAction?
+                if obj.status == "COMPLETED" || obj.status == "SUCCESS"{
+                    self.bottomContainer.hidden = false
+                    if type == AuthorizePair {
+                        self.dismissViewControllerAnimated(false, completion: nil)
+                        self.btnPair.setTitle("Device is Paired", forState: .Normal)
+                        self.btnPair.backgroundColor = UIColor.lightGrayColor()
+                    }
+                    if type == AuthorizeSales || type == AuthorizePreSales {
+                        refund = UIAlertAction(title: "Void", style: .Destructive, handler: { (action) in
+                            if let transaction = obj.transactions.first as? PoyntTransactionObject {
+                                if type == AuthorizeSales {
+                                    self.poyntAction(AuthorizeVoid, transaction: transaction)
+                                }else{
+                                    self.poyntAction(AuthorizeVoidPreSales, transaction: transaction)
+
+                                }
+                            }
+                        })
+
+                        capture = UIAlertAction(title: "Capture", style: .Default, handler: { (action) in
+                            if let transaction = obj.transactions.first as? PoyntTransactionObject {
+                                self.poyntAction(AuthorizeCapture, transaction: transaction)
+                            }
+                        })
+                    }
+                }
+
+                if obj.status == "" {
+                    title = "Oh oh."
+                    msg = "There was a problem with the transaction."
+                }
+
+                let alert = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
+                let ok = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                alert.addAction(ok)
+
+                //action options
+                if let btn = capture as UIAlertAction? {
+                    alert.addAction(btn)
+                }
+                if let btn = refund as UIAlertAction? {
+                    alert.addAction(btn)
+                }
+
+
+                self.presentViewController(alert, animated: true, completion: nil)
+
+                //set/ re-set a reference id for a new payment
+                let newId = NSUUID().UUIDString
+                self.payment.referenceId = newId
+                self.updateUI()
+                
+            }
+        }
+        //try to auto connect
+        self.paymentManager.authorizePairing(self.paymentManager.pairingCode)
     }
 
     func updateUI() {
@@ -164,14 +262,14 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         self.navigationItem.rightBarButtonItem = bb
     }
 
-    func onDoAction(tpe:PoyntActionType){
+    func onDoAction(tpe:Api){
         var ttle = ""
         switch tpe {
-        case .AuthorizeRefund:
+        case AuthorizeRefund:
             ttle = "Refund"
-        case .AuthorizeCapture:
+        case AuthorizeCapture:
             ttle = "Capture"
-        case .AuthorizeVoid:
+        case AuthorizeVoid:
             ttle = "Void"
         default:
             print("\(#function)\r\nunsupported type ---> \(tpe)")
@@ -196,15 +294,15 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         let alert = UIAlertController(title: "Other Actions", message: "Choose an action below.", preferredStyle: UIAlertControllerStyle.ActionSheet)
 
         alert.addAction(UIAlertAction(title: "Void", style: .Default, handler: { (action) in
-            self.onDoAction(.AuthorizeVoid)
+            self.onDoAction(AuthorizeVoid)
         }))
 
         alert.addAction(UIAlertAction(title: "Capture", style: .Default, handler: { (action) in
-            self.onDoAction(.AuthorizeCapture)
+            self.onDoAction(AuthorizeCapture)
         }))
 
         alert.addAction(UIAlertAction(title: "Refund", style: .Default, handler: { (action) in
-            self.onDoAction(.AuthorizeRefund)
+            self.onDoAction(AuthorizeRefund)
         }))
 
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler:nil))
@@ -212,22 +310,22 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         self.presentViewController(alert, animated: true, completion: nil)
     }
 
-    func poyntAction(action:PoyntActionType,transaction:AnyObject){
+    func poyntAction(action:Api,transaction:AnyObject){
         MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         switch action {
-        case .AuthorizeSales:
+        case AuthorizeSales:
             self.paymentManager.authorizeSales(transaction as! PoyntPaymentObject)
-        case .AuthorizePair:
+        case AuthorizePair:
             self.paymentManager.authorizePairing(self.tfCode.text!);
-        case .AuthorizePreSales:
+        case AuthorizePreSales:
             self.paymentManager.authorizePreSales(transaction as! PoyntPaymentObject)
-        case .AuthorizeCapture:
+        case AuthorizeCapture:
             self.paymentManager.authorizeCapture(transaction as! PoyntTransactionObject)
-        case .AuthorizeVoid:
+        case AuthorizeVoid:
             self.paymentManager.authorizeVoid(transaction as! PoyntTransactionObject)
-        case .AuthorizeVoidPreSales:
+        case AuthorizeVoidPreSales:
             self.paymentManager.authorizeVoidPreSales(transaction as! PoyntTransactionObject)
-        case .AuthorizeRefund:
+        case AuthorizeRefund:
             self.paymentManager.authorizeRefund(transaction as! PoyntTransactionObject)
 
         default:
@@ -235,98 +333,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         }
     }
 
-    func setupPaymentManager() {
-        
-        self.paymentManager.clientName = "Ralph"
-        self.paymentManager.timeout = 30000 // 30 seconds
 
-        // change to false to remove logging in console
-        PoyntDebug.sharedDebugger.verbose = true
-
-
-        //...because nothing is perfect
-        paymentManager.onError = {(error) -> Void in
-            MBProgressHUD.hideHUDForView(self.view, animated: true)
-            print("\(#function)\r\nerror for transaction ---> \(error)")
-
-            let alert = UIAlertController(title: "Erorr.", message: "There was an error. \(error.localizedDescription)", preferredStyle: .Alert)
-            let cancel = UIAlertAction(title: "ok", style: .Default, handler:nil)
-            alert.addAction(cancel)
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
-
-        //...gets a transaction object
-        paymentManager.onTransactionResponse = {(obj:PoyntTransactionResponseObject,type:PoyntActionType) -> Void in
-            MBProgressHUD.hideHUDForView(self.view, animated: true)
-            print("\(#function)\r\nreceived response for \(type) ---> \(obj)")
-
-            if let json = obj.rawJson as AnyObject?{
-                let transIds = obj.transactions.map({
-                    "id: \($0.transactionId ?? "")"
-                }).joinWithSeparator("\r\n")
-                self.textViewResponse.text = "Transactions:\r\n\(transIds)\r\n\(json.description)"
-            }
-
-
-            
-            var title = "Status: \(obj.status)"
-            var msg = " response details below."
-            var refund: UIAlertAction?
-            var capture: UIAlertAction?
-            if obj.status == "COMPLETED" || obj.status == "SUCCESS"{
-                self.bottomContainer.hidden = false
-                if type == .AuthorizePair {
-                    self.dismissViewControllerAnimated(false, completion: nil)
-                    self.btnPair.setTitle("Device is Paired", forState: .Normal)
-                    self.btnPair.backgroundColor = UIColor.lightGrayColor()
-                }
-                if type == .AuthorizeSales || type == .AuthorizePreSales {
-                    refund = UIAlertAction(title: "Void", style: .Destructive, handler: { (action) in
-                        if let transaction = obj.transactions.first as PoyntTransactionObject? {
-                            if type == .AuthorizeSales {
-                                self.poyntAction(.AuthorizeVoid, transaction: transaction)
-                            }else{
-                                self.poyntAction(.AuthorizeVoidPreSales, transaction: transaction)
-
-                            }
-                        }
-                    })
-
-                    capture = UIAlertAction(title: "Capture", style: .Default, handler: { (action) in
-                        if let transaction = obj.transactions.first as PoyntTransactionObject? {
-                            self.poyntAction(.AuthorizeCapture, transaction: transaction)
-                        }
-                    })
-                }
-            }
-
-            if obj.status == "" {
-                title = "Oh oh."
-                msg = "There was a problem with the transaction."
-            }
-
-            let alert = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
-            let ok = UIAlertAction(title: "Ok", style: .Default, handler: nil)
-            alert.addAction(ok)
-
-            //action options
-            if let btn = capture as UIAlertAction? {
-                alert.addAction(btn)
-            }
-            if let btn = refund as UIAlertAction? {
-                alert.addAction(btn)
-            }
-
-
-            self.presentViewController(alert, animated: true, completion: nil)
-
-            //set/ re-set a reference id for a new payment
-            let newId = NSUUID().UUIDString
-            self.payment.referenceId = newId
-            self.updateUI()
-        }
-
-    }
 
     // MARK: - IBACTIONS
     @IBAction func sendData(btn:UIButton){
@@ -335,28 +342,23 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         self.paymentManager.url = self.tfIP.text!;
         
         if(btn == self.btnSale){
-            self.poyntAction(.AuthorizeSales, transaction: payment)
+            self.poyntAction(AuthorizeSales, transaction: payment)
         }
 
         if(btn == self.btnPreSale){
-            self.poyntAction(.AuthorizePreSales, transaction: payment)
+            self.poyntAction(AuthorizePreSales, transaction: payment)
         }
 
         if(btn == self.btnPair){
-            self.poyntAction(.AuthorizePair, transaction: payment)
+            self.poyntAction(AuthorizePair, transaction: payment)
         }
-
-
     }
-
-    
-
 
     //MARK: table view delegate
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! ItemTableViewCell
         if let ordr = self.payment.order as PoyntOrderObject? ,
-        let itms = ordr.items as [PoyntOrderItemObject]? {
+        let itms = ordr.items as? [PoyntOrderItemObject] {
             cell.lblTitle.text = "\(itms[indexPath.row].name!) x \(itms[indexPath.row].quantity)"
         }
 
@@ -365,14 +367,16 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let po = payment.order as PoyntOrderObject?,
-            let items = po.items as [PoyntOrderItemObject]? {
+            let items = po.items as? [PoyntOrderItemObject] {
                 return items.count
         }
         return 0
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let item  = payment.order?.items?[indexPath.row] as PoyntOrderItemObject? {
+        if let ordr = payment.order as PoyntOrderObject?,
+            let items = ordr.items as? [PoyntOrderItemObject],
+            let item  = items[indexPath.row] as PoyntOrderItemObject? {
             self.currentItem = item
             self.performSegueWithIdentifier("segueForItemDetails", sender: nil)
         }

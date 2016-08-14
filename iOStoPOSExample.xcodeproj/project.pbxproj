@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D2E3DDD1D5A5F8F008BE79A /* PoyntLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2E3DDC1D5A5F8F008BE79A /* PoyntLib.framework */; };
-		5D2E3DDE1D5A5F93008BE79A /* PoyntLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2E3DDC1D5A5F8F008BE79A /* PoyntLib.framework */; };
-		5D2E3DDF1D5A5F93008BE79A /* PoyntLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2E3DDC1D5A5F8F008BE79A /* PoyntLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D60890E1D108D9E0059485E /* String+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60890D1D108D9E0059485E /* String+Currency.swift */; };
 		5D66BF831D107C4F00F18BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D66BF6F1D107C4F00F18BB9 /* Assets.xcassets */; };
 		5D66BF861D107C4F00F18BB9 /* PoyntOrderItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D66BF731D107C4F00F18BB9 /* PoyntOrderItemViewController.swift */; };
@@ -18,6 +15,7 @@
 		5D66BF971D107CA400F18BB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D66BF931D107CA400F18BB9 /* LaunchScreen.storyboard */; };
 		5D66BF981D107CA400F18BB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D66BF951D107CA400F18BB9 /* Main.storyboard */; };
 		5DA19C8B1D1C7992006B3D49 /* ChooseTerminalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA19C8A1D1C7992006B3D49 /* ChooseTerminalViewController.swift */; };
+		5DC40D951D5F9EB500EA3A73 /* libPoyntLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC40D941D5F9EB500EA3A73 /* libPoyntLib.a */; };
 		5DDD713E1CA9B6B800DF1093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD713D1CA9B6B800DF1093 /* AppDelegate.swift */; };
 		5DF35BB31C768D6400A3E46E /* TCPTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF35BB21C768D6400A3E46E /* TCPTestTests.swift */; };
 		5DF35BBE1C768D6400A3E46E /* TCPTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF35BBD1C768D6400A3E46E /* TCPTestUITests.swift */; };
@@ -48,7 +46,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5D2E3DDF1D5A5F93008BE79A /* PoyntLib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,7 +55,6 @@
 /* Begin PBXFileReference section */
 		007A78692370A3FE7319555A /* Pods-iOStoPOSExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOStoPOSExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOStoPOSExample/Pods-iOStoPOSExample.release.xcconfig"; sourceTree = "<group>"; };
 		5D0BA2331C88F8A600C28592 /* iOStoPOSExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOStoPOSExample-Bridging-Header.h"; sourceTree = "<group>"; };
-		5D2E3DDC1D5A5F8F008BE79A /* PoyntLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PoyntLib.framework; sourceTree = "<group>"; };
 		5D60890D1D108D9E0059485E /* String+Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Currency.swift"; sourceTree = "<group>"; };
 		5D66BF6F1D107C4F00F18BB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = src/Assets.xcassets; sourceTree = "<group>"; };
 		5D66BF731D107C4F00F18BB9 /* PoyntOrderItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoyntOrderItemViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +63,22 @@
 		5D66BF941D107CA400F18BB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D66BF961D107CA400F18BB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DA19C8A1D1C7992006B3D49 /* ChooseTerminalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseTerminalViewController.swift; sourceTree = "<group>"; };
+		5DC40D851D5F9EB500EA3A73 /* PoyntDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntDebug.h; sourceTree = "<group>"; };
+		5DC40D861D5F9EB500EA3A73 /* PoyntDiscountObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntDiscountObject.h; sourceTree = "<group>"; };
+		5DC40D871D5F9EB500EA3A73 /* PoyntLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntLib.h; sourceTree = "<group>"; };
+		5DC40D881D5F9EB500EA3A73 /* PoyntOrderItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntOrderItemObject.h; sourceTree = "<group>"; };
+		5DC40D891D5F9EB500EA3A73 /* PoyntOrderItemTax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntOrderItemTax.h; sourceTree = "<group>"; };
+		5DC40D8A1D5F9EB500EA3A73 /* PoyntOrderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntOrderObject.h; sourceTree = "<group>"; };
+		5DC40D8B1D5F9EB500EA3A73 /* PoyntPaymentAmountObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntPaymentAmountObject.h; sourceTree = "<group>"; };
+		5DC40D8C1D5F9EB500EA3A73 /* PoyntPaymentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntPaymentObject.h; sourceTree = "<group>"; };
+		5DC40D8D1D5F9EB500EA3A73 /* PoyntPOSConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntPOSConnectionManager.h; sourceTree = "<group>"; };
+		5DC40D8E1D5F9EB500EA3A73 /* PoyntSerializedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntSerializedObject.h; sourceTree = "<group>"; };
+		5DC40D8F1D5F9EB500EA3A73 /* PoyntTerminal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntTerminal.h; sourceTree = "<group>"; };
+		5DC40D901D5F9EB500EA3A73 /* PoyntTerminalDiscover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntTerminalDiscover.h; sourceTree = "<group>"; };
+		5DC40D911D5F9EB500EA3A73 /* PoyntTransactionAmounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntTransactionAmounts.h; sourceTree = "<group>"; };
+		5DC40D921D5F9EB500EA3A73 /* PoyntTransactionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntTransactionObject.h; sourceTree = "<group>"; };
+		5DC40D931D5F9EB500EA3A73 /* PoyntTransactionResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntTransactionResponseObject.h; sourceTree = "<group>"; };
+		5DC40D941D5F9EB500EA3A73 /* libPoyntLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPoyntLib.a; sourceTree = "<group>"; };
 		5DDD713D1CA9B6B800DF1093 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DF35B9A1C768D6400A3E46E /* iOStoPOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOStoPOSExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF35BA91C768D6400A3E46E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,9 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D2E3DDE1D5A5F93008BE79A /* PoyntLib.framework in Frameworks */,
+				5DC40D951D5F9EB500EA3A73 /* libPoyntLib.a in Frameworks */,
 				F95FD70E43A81080465E1DDD /* Pods_iOStoPOSExample.framework in Frameworks */,
-				5D2E3DDD1D5A5F8F008BE79A /* PoyntLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +122,7 @@
 		5D0BA2471C88F93F00C28592 /* supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				5D2E3DDC1D5A5F8F008BE79A /* PoyntLib.framework */,
+				5DC40D821D5F9EB500EA3A73 /* PoyntLib */,
 				5D66BF931D107CA400F18BB9 /* LaunchScreen.storyboard */,
 				5D66BF951D107CA400F18BB9 /* Main.storyboard */,
 				5D66BF6F1D107C4F00F18BB9 /* Assets.xcassets */,
@@ -148,6 +159,45 @@
 			);
 			name = views;
 			path = src/views;
+			sourceTree = "<group>";
+		};
+		5DC40D821D5F9EB500EA3A73 /* PoyntLib */ = {
+			isa = PBXGroup;
+			children = (
+				5DC40D831D5F9EB500EA3A73 /* include */,
+				5DC40D941D5F9EB500EA3A73 /* libPoyntLib.a */,
+			);
+			path = PoyntLib;
+			sourceTree = SOURCE_ROOT;
+		};
+		5DC40D831D5F9EB500EA3A73 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				5DC40D841D5F9EB500EA3A73 /* PoyntLib */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		5DC40D841D5F9EB500EA3A73 /* PoyntLib */ = {
+			isa = PBXGroup;
+			children = (
+				5DC40D851D5F9EB500EA3A73 /* PoyntDebug.h */,
+				5DC40D861D5F9EB500EA3A73 /* PoyntDiscountObject.h */,
+				5DC40D871D5F9EB500EA3A73 /* PoyntLib.h */,
+				5DC40D881D5F9EB500EA3A73 /* PoyntOrderItemObject.h */,
+				5DC40D891D5F9EB500EA3A73 /* PoyntOrderItemTax.h */,
+				5DC40D8A1D5F9EB500EA3A73 /* PoyntOrderObject.h */,
+				5DC40D8B1D5F9EB500EA3A73 /* PoyntPaymentAmountObject.h */,
+				5DC40D8C1D5F9EB500EA3A73 /* PoyntPaymentObject.h */,
+				5DC40D8D1D5F9EB500EA3A73 /* PoyntPOSConnectionManager.h */,
+				5DC40D8E1D5F9EB500EA3A73 /* PoyntSerializedObject.h */,
+				5DC40D8F1D5F9EB500EA3A73 /* PoyntTerminal.h */,
+				5DC40D901D5F9EB500EA3A73 /* PoyntTerminalDiscover.h */,
+				5DC40D911D5F9EB500EA3A73 /* PoyntTransactionAmounts.h */,
+				5DC40D921D5F9EB500EA3A73 /* PoyntTransactionObject.h */,
+				5DC40D931D5F9EB500EA3A73 /* PoyntTransactionResponseObject.h */,
+			);
+			path = PoyntLib;
 			sourceTree = "<group>";
 		};
 		5DF35B911C768D6400A3E46E = {
@@ -555,13 +605,18 @@
 					"$(PROJECT_DIR)/iOStoPOSExample",
 					"$(PROJECT_DIR)/iOStoPOSExample/src/views",
 				);
+				HEADER_SEARCH_PATHS = $SRCROOT/PoyntLib/include/PoyntLib;
 				INFOPLIST_FILE = iOStoPOSExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOStoPOSExample/PoyntLib",
+					"$(PROJECT_DIR)/PoyntLib",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = co.poynt.iOStoPOSExample;
 				PRODUCT_NAME = iOStoPOSExample;
-				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/CommonCrypto";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOStoPOSExample/iOStoPOSExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -580,12 +635,17 @@
 					"$(PROJECT_DIR)/iOStoPOSExample",
 					"$(PROJECT_DIR)/iOStoPOSExample/src/views",
 				);
+				HEADER_SEARCH_PATHS = $SRCROOT/PoyntLib/include/PoyntLib;
 				INFOPLIST_FILE = iOStoPOSExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOStoPOSExample/PoyntLib",
+					"$(PROJECT_DIR)/PoyntLib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.poynt.iOStoPOSExample;
 				PRODUCT_NAME = iOStoPOSExample;
-				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/CommonCrypto";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOStoPOSExample/iOStoPOSExample-Bridging-Header.h";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};

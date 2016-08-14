@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import PoyntLib
+
+
 class ChooseTerminalViewController: UITableViewController{
     let discovery = PoyntTerminalDiscover()
     var data: [PoyntTerminal] = []
@@ -15,12 +16,15 @@ class ChooseTerminalViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Looking for terminals..."
-        discovery.findTerminals { (terminals) in
 
-            self.data = terminals
-            self.tableView.reloadData()
-            self.title = "\(self.data.count) terminals"
+        discovery.findTerminals { (terminals) in
+            if let terms = terminals as? [PoyntTerminal] {
+                self.data = terms
+                self.tableView.reloadData()
+                self.title = "\(self.data.count) terminals"
+            }
         }
+
     }
     @IBAction func onCancel(sender: AnyObject) {
         self.performSegueWithIdentifier("unwindToHome", sender: self)

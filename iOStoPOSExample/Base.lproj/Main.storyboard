@@ -9,7 +9,7 @@
         <!--Poynt Payment View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PoyntPaymentViewController" customModule="iOStoPOSExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PoyntPaymentViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -176,7 +176,7 @@
                                             <constraint firstAttribute="height" constant="185" id="OuM-fH-coS"/>
                                         </constraints>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Vrz-vg-P6T" customClass="ItemTableViewCell" customModule="iOStoPOSExample" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Vrz-vg-P6T" customClass="ItemTableViewCell" customModule="Example" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vrz-vg-P6T" id="so5-lO-rMB">
@@ -324,7 +324,7 @@
         <!--Transactions View Controller-->
         <scene sceneID="aQH-NG-laF">
             <objects>
-                <viewController id="0St-gx-9VR" customClass="TransactionsViewController" customModule="iOStoPOSExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0St-gx-9VR" customClass="TransactionsViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gfA-ez-XSQ"/>
                         <viewControllerLayoutGuide type="bottom" id="lff-ea-y7a"/>
@@ -337,7 +337,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="transactionTableViewCell" rowHeight="100" id="ffl-a4-wVw" customClass="ItemTableViewCell" customModule="iOStoPOSExample" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="transactionTableViewCell" rowHeight="100" id="ffl-a4-wVw" customClass="ItemTableViewCell" customModule="Example" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ffl-a4-wVw" id="exd-1x-83V">
@@ -413,7 +413,7 @@
         <!--Poynt Order Item View Controller-->
         <scene sceneID="4Om-t2-m9u">
             <objects>
-                <viewController id="ebV-qu-rOA" customClass="PoyntOrderItemViewController" customModule="iOStoPOSExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ebV-qu-rOA" customClass="PoyntOrderItemViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VXR-X2-CuD"/>
                         <viewControllerLayoutGuide type="bottom" id="kc2-oy-QFq"/>
@@ -810,7 +810,7 @@
         <!--Choose Terminal View Controller-->
         <scene sceneID="99S-qv-Va8">
             <objects>
-                <tableViewController id="9Fj-At-BJJ" customClass="ChooseTerminalViewController" customModule="iOStoPOSExample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="9Fj-At-BJJ" customClass="ChooseTerminalViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="uTu-WA-aLF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

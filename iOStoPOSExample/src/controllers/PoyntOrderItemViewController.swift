@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import PoyntLib
+
+
 class PoyntOrderItemViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     var order: PoyntOrderObject?
     var item: PoyntOrderItemObject?
@@ -48,7 +49,7 @@ class PoyntOrderItemViewController: UIViewController,UITableViewDataSource,UITab
                             self.tfUnitPrice.text = "\(up)"
             }
         }else {
-            self.item = PoyntOrderItemObject(sku: nil, unitPrice: 0, quantity: nil)
+            self.item = PoyntOrderItemObject(sku: nil, unitPrice: 0, quantity: 0)
         }
     }
 
@@ -137,7 +138,7 @@ class PoyntOrderItemViewController: UIViewController,UITableViewDataSource,UITab
     @IBAction func onExitAndRemove(){
         //remove item
         if let ordr = self.order as PoyntOrderObject? ,
-        let items = ordr.items as [PoyntOrderItemObject]? {
+        let items = ordr.items as? [PoyntOrderItemObject] {
             var newItems: [PoyntOrderItemObject] = []
             for itm in items {
                 if itm != self.item {
@@ -159,14 +160,14 @@ class PoyntOrderItemViewController: UIViewController,UITableViewDataSource,UITab
         if let cell = tableView.dequeueReusableCellWithIdentifier(idSt) as UITableViewCell? {
             if let itm = self.item as PoyntOrderItemObject? {
                 if tableView == self.tableViewDiscounts{
-                    if let discounts = itm.discounts as [PoyntDiscountObject]? {
+                    if let discounts = itm.discounts as? [PoyntDiscountObject] {
                         let discount = discounts[indexPath.row]
                         cell.textLabel?.text = "\(String.currencyForFloat(Float(discount.amount)))- \(discount.customName!)"
                     }
                 }
 
                 if tableView == self.tableViewTaxes {
-                    if let txs = itm.taxes as [PoyntOrderItemTax]? {
+                    if let txs = itm.taxes as? [PoyntOrderItemTax] {
                         let tx = txs[indexPath.row]
                         cell.textLabel?.text = "\(String.currencyForFloat(Float(tx.amount))) - \(tx.type!)"
                     }
@@ -181,13 +182,13 @@ class PoyntOrderItemViewController: UIViewController,UITableViewDataSource,UITab
         if let itm = self.item as PoyntOrderItemObject?{
 
             if tableView == self.tableViewDiscounts{
-                if let discounts = itm.discounts as [PoyntDiscountObject]? {
+                if let discounts = itm.discounts as? [PoyntDiscountObject] {
                     return discounts.count
                 }
             }
 
             if tableView == self.tableViewTaxes {
-                if let txs = itm.taxes as [PoyntOrderItemTax]? {
+                if let txs = itm.taxes as? [PoyntOrderItemTax] {
                     return txs.count
                 }
             }
@@ -204,7 +205,7 @@ class PoyntOrderItemViewController: UIViewController,UITableViewDataSource,UITab
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if let itm = self.item as PoyntOrderItemObject?{
             if tableView == self.tableViewDiscounts{
-                if var objs = itm.discounts as [PoyntDiscountObject]? {
+                if var objs = itm.discounts as? [PoyntDiscountObject] {
 
                     //remove the data
                     objs.removeAtIndex(indexPath.row)
@@ -218,7 +219,7 @@ class PoyntOrderItemViewController: UIViewController,UITableViewDataSource,UITab
             }
 
             if tableView == self.tableViewTaxes {
-                if var objs = itm.taxes as [PoyntOrderItemTax]? {
+                if var objs = itm.taxes as? [PoyntOrderItemTax] {
 
                     //remove the data
                     objs.removeAtIndex(indexPath.row)
