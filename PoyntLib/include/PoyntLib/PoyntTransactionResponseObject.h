@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 @class  PoyntTransactionObject;
 @interface PoyntTransactionResponseObject : NSObject
+@property(nonatomic,readonly) NSError *responseError;
 @property(nonatomic,copy) NSString *status;
 @property(nonatomic,strong) NSArray *transactions; //PoyntTransactionObject
 @property (nonatomic,strong) NSDictionary *order;

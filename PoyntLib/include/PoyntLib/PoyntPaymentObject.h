@@ -22,7 +22,7 @@
 @property(nonatomic)BOOL disableTip;
 @property(nonatomic)BOOL multiTender;
 @property(nonatomic)BOOL nonReferencedCredit;
-@property(nonatomic,weak) PoyntOrderObject *order;
+@property(nonatomic,strong) PoyntOrderObject *order;
 @property(nonatomic,copy)NSString  *orderId;
 @property(nonatomic,copy)NSString  *referenceId;
 @property(nonatomic)BOOL skipReceiptScreen;
