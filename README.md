@@ -13,7 +13,9 @@ Sample demonstrating the usage of Poynt POS Connector SDK for iOS
 
 ##Updates
 
-* 8-15-2016 - removed pods, made static PoyntLib.a making all updates from 8-01 irrelevant!
+* 8-15-2016 - 
+	* removed pods, made static PoyntLib.a making all updates from 8-01 irrelevant!
+
 
 * 8-01-2016
 	* <del>Amplitude (this will go away, but necessary for now)
