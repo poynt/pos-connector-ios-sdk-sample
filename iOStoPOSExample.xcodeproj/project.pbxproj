@@ -572,6 +572,7 @@
 				PRODUCT_NAME = iOStoPOSExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "iOStoPOSExample/iOStoPOSExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -604,6 +605,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.poynt.iOStoPOSExample;
 				PRODUCT_NAME = iOStoPOSExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "iOStoPOSExample/iOStoPOSExample-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
