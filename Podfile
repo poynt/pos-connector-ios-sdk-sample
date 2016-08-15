@@ -4,7 +4,7 @@
  use_frameworks!
 
 target 'iOStoPOSExample' do
-    pod 'MBProgressHUD', '~> 0.9.2'
+    pod 'MBProgressHUD', '~> 1.0.0'
 
 end
 

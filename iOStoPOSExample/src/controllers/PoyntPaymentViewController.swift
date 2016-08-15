@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import MBProgressHUD
+
 
 class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate  {
-
+    @IBOutlet weak var spinnerContainer: UIView!
     @IBOutlet weak var tfIP:UITextField!
     @IBOutlet weak var tfCode:UITextField!
     @IBOutlet weak var btnSale: UIButton!
@@ -52,7 +52,6 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-//        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
 
         if(!self.paymentManager.paired && self.initialLoad){
             self.initialLoad = false
@@ -70,7 +69,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {
         self.dismissViewControllerAnimated(true) {
             if segue.identifier == "unwindToHome" {
-                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                self.toggleHud(false)
                 if let vc = segue.sourceViewController as? ChooseTerminalViewController,
                     let terminal = vc.selectedTerminal as PoyntTerminal?{
                     if let ip = terminal.ip as String?,
@@ -139,7 +138,11 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         self.bottomContainer.hidden = true
 
     }
-
+    func toggleHud(show:Bool){
+        UIView.animateWithDuration(0.4) { 
+            self.spinnerContainer.alpha = (show) ? 1 : 0;
+        }
+    }
     func setupPaymentManager() {
 
         self.paymentManager.clientName = "Ralph"
@@ -151,7 +154,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
 
         //...because nothing is perfect
         paymentManager.onError = {(error) -> Void in
-            MBProgressHUD.hideHUDForView(self.view, animated: true)
+            self.toggleHud(false)
             print("\(#function)\r\nerror for transaction ---> \(error)")
 
             let alert = UIAlertController(title: "Erorr.", message: "There was an error. \(error.localizedDescription)", preferredStyle: .Alert)
@@ -162,7 +165,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
 
         //...gets a transaction object
         paymentManager.onTransactionResponse = {(transactionObect ,apiType) -> Void in
-            MBProgressHUD.hideHUDForView(self.view, animated: true)
+            self.toggleHud(false)
             if let obj = transactionObect as PoyntTransactionResponseObject?,
                 let type = apiType as Api?{
                 print("\(#function)\r\nreceived response for \(type) ---> \(obj)")
@@ -311,7 +314,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
     }
 
     func poyntAction(action:Api,transaction:AnyObject){
-        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        self.toggleHud(true)
         switch action {
         case AuthorizeSales:
             self.paymentManager.authorizeSales(transaction as! PoyntPaymentObject)
@@ -329,7 +332,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             self.paymentManager.authorizeRefund(transaction as! PoyntTransactionObject)
 
         default:
-            MBProgressHUD.hideHUDForView(self.view, animated: true)
+            self.toggleHud(false)
         }
     }
 
