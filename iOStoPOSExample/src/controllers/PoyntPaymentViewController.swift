@@ -167,7 +167,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         paymentManager.onTransactionResponse = {(transactionObect ,apiType) -> Void in
             self.toggleHud(false)
             if let obj = transactionObect as PoyntTransactionResponseObject?,
-                let type = apiType as Api?{
+                let type = apiType as PoyntActionType?{
                 print("\(#function)\r\nreceived response for \(type) ---> \(obj)")
 
                 if let json = obj.rawJson as AnyObject?{
@@ -265,7 +265,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         self.navigationItem.rightBarButtonItem = bb
     }
 
-    func onDoAction(tpe:Api){
+    func onDoAction(tpe:PoyntActionType){
         var ttle = ""
         switch tpe {
         case AuthorizeRefund:
@@ -313,7 +313,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         self.presentViewController(alert, animated: true, completion: nil)
     }
 
-    func poyntAction(action:Api,transaction:AnyObject){
+    func poyntAction(action:PoyntActionType,transaction:AnyObject){
         self.toggleHud(true)
         switch action {
         case AuthorizeSales:

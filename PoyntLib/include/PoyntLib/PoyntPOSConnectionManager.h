@@ -21,11 +21,11 @@ typedef enum {
     AuthorizePreSales,
     AuthorizeVoidPreSales,
     AuthorizeCapture
-} Api;
+} PoyntActionType;
 
 
 
-typedef void(^OnTransactionResponse)(PoyntTransactionResponseObject *data, Api type) ;
+typedef void(^OnTransactionResponse)(PoyntTransactionResponseObject *data, PoyntActionType type) ;
 typedef void(^OnError)(NSError *error) ;
 
 @interface PoyntPOSConnectionManager : NSObject
