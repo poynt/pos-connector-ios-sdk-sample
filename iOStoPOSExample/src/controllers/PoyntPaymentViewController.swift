@@ -273,6 +273,8 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             ttle = "Void"
         case AuthorizeCompletion:
             ttle = "Completion"
+        case AuthorizePartialRefund:
+            ttle = "Partial Refund"
         default:
             print("\(#function)\r\nunsupported type ---> \(tpe)")
         }
@@ -281,8 +283,10 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         alert.addAction(UIAlertAction(title: "Do it.", style: .Destructive, handler: { (action) in
 
             if let idd = alert.textFields?.first?.text as String?{
-                if tpe == AuthorizeCompletion{
-                    self.completionForTransactionId(idd)
+                if tpe == AuthorizeCompletion {
+                    self.partialCompletionForTransactionId(idd)
+                }else if tpe == AuthorizePartialRefund {
+                    self.partialRefundForTransactionId(idd)
                 }else{
                     let poyntTransacitonObject = PoyntTransactionObject()
                     poyntTransacitonObject.transactionId = idd
@@ -315,6 +319,9 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         alert.addAction(UIAlertAction(title: "Completion", style: .Default, handler: { (action) in
             self.onDoAction(AuthorizeCompletion)
         }))
+        alert.addAction(UIAlertAction(title: "Partial Refund", style: .Default, handler: { (action) in
+            self.onDoAction(AuthorizePartialRefund)
+        }))
 
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler:nil))
 
@@ -342,6 +349,8 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             self.paymentManager.authorizePreSales(transaction as! PoyntPaymentObject)
         case AuthorizePartialCompletion:
             self.paymentManager.authorizePartialCompletion(transaction as! PoyntPaymentObject)
+        case AuthorizePartialRefund:
+            self.paymentManager.authorizePartialRefund(transaction as! PoyntPaymentObject)
         default:
             self.toggleHud(false)
         }
@@ -367,7 +376,35 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             self.poyntAction(AuthorizePair, transaction: payment)
         }
     }
-    func completionForTransactionId(trnxId:String){
+
+    func partialRefundForTransactionId(trnxId:String){
+        let alert = UIAlertController(title: "Partial Refund", message: "Enter the amount.", preferredStyle: .Alert);
+        let send = UIAlertAction(title: "Send", style: .Default, handler: { (action) in
+
+            var amt: Int = 0
+
+            if let idd = alert.textFields?.first?.text as String?{
+                let _amt = Int(idd)
+                if let val = _amt as Int? {
+                    amt = val
+                }
+            }
+
+
+
+            let payment = PoyntPaymentObject()
+            payment.transactionId = trnxId;
+            payment.amount = amt
+            self.poyntAction(AuthorizePartialRefund, transaction: payment);
+        });
+        alert.addAction(send)
+        alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+            textField.placeholder = "Amount: 100 = $1.00"
+        })
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
+    func partialCompletionForTransactionId(trnxId:String){
         let alert = UIAlertController(title: "Add Tip?", message: "Enter tip amount, or leave blank if you do not want to add a tip.", preferredStyle: .Alert);
         let send = UIAlertAction(title: "Send", style: .Default, handler: { (action) in
 
