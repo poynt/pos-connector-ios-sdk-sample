@@ -32,7 +32,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
     let paymentManager =  PoyntPOSConnectionManager()
     let payment = PoyntPaymentObject()
     var currentItem: PoyntOrderItemObject?
-
+    var mostRecentTransactionId: String = "xxx"
     var selectingTerminal: Bool = false
     var initialLoad: Bool = true
 
@@ -174,6 +174,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
                     let transIds = obj.transactions.map({
                         "id: \($0.transactionId ?? "")"
                     }).joinWithSeparator("\r\n")
+                    self.mostRecentTransactionId = transIds
                     self.textViewResponse.text = "Transactions:\r\n\(transIds)\r\n\(json.description)"
                 }
 
@@ -274,16 +275,24 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             ttle = "Capture"
         case AuthorizeVoid:
             ttle = "Void"
+        case AuthorizeCompletion:
+            ttle = "Completion"
         default:
             print("\(#function)\r\nunsupported type ---> \(tpe)")
         }
         let alert = UIAlertController(title: ttle, message: "Add a transactionId", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Do it.", style: .Destructive, handler: { (action) in
+
             if let idd = alert.textFields?.first?.text as String?{
-                let poyntTransacitonObject = PoyntTransactionObject()
-                poyntTransacitonObject.transactionId = idd
-                self.poyntAction(tpe, transaction: poyntTransacitonObject)
+                if tpe == AuthorizeCompletion{
+                    self.completionForTransactionId(idd)
+                }else{
+                    let poyntTransacitonObject = PoyntTransactionObject()
+                    poyntTransacitonObject.transactionId = idd
+                    self.poyntAction(tpe, transaction: poyntTransacitonObject)
+                }
+
             }
         }))
 
@@ -306,6 +315,9 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
 
         alert.addAction(UIAlertAction(title: "Refund", style: .Default, handler: { (action) in
             self.onDoAction(AuthorizeRefund)
+        }))
+        alert.addAction(UIAlertAction(title: "Completion", style: .Default, handler: { (action) in
+            self.onDoAction(AuthorizeCompletion)
         }))
 
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler:nil))
@@ -330,7 +342,10 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             self.paymentManager.authorizeVoidPreSales(transaction as! PoyntTransactionObject)
         case AuthorizeRefund:
             self.paymentManager.authorizeRefund(transaction as! PoyntTransactionObject)
-
+        case AuthorizeCompletion:
+            self.paymentManager.authorizePreSales(transaction as! PoyntPaymentObject)
+        case AuthorizePartialCompletion:
+            self.paymentManager.authorizePartialCompletion(transaction as! PoyntPaymentObject)
         default:
             self.toggleHud(false)
         }
@@ -356,7 +371,42 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             self.poyntAction(AuthorizePair, transaction: payment)
         }
     }
+    func completionForTransactionId(trnxId:String){
+        let alert = UIAlertController(title: "Add Tip?", message: "Enter tip amount, or leave blank if you do not want to add a tip.", preferredStyle: .Alert);
+        let send = UIAlertAction(title: "Send", style: .Default, handler: { (action) in
 
+            var amt: Int = 0
+            var tipAmount: Int = 0
+            if let idd = alert.textFields?.first?.text as String?{
+                let _amt = Int(idd)
+                if let val = _amt as Int? {
+                    amt = val
+                }
+            }
+
+            if let idd = alert.textFields![1].text as String?{
+                let _amt = Int(idd)
+                if let val = _amt as Int? {
+                    tipAmount = val
+                }
+            }
+            
+
+            let payment = PoyntPaymentObject()
+            payment.transactionId = trnxId;
+            payment.amount = amt
+            payment.tipAmount = tipAmount
+            self.poyntAction(AuthorizePartialCompletion, transaction: payment);
+        });
+        alert.addAction(send)
+        alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+            textField.placeholder = "Amount: 100 = $1.00"
+        })
+        alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+            textField.placeholder = "Tip: 100 = $1.00"
+        })
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
     //MARK: table view delegate
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! ItemTableViewCell
