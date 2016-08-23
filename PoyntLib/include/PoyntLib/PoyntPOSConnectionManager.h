@@ -43,7 +43,6 @@ typedef void(^OnError)(NSError *error) ;
 
 
 -(void)authorizeCapture:(PoyntTransactionObject *)transaction;
--(void)authorizeCompletion:(NSString *)transactionId payment:(PoyntPaymentObject *)payment;
 -(void)authorizePairing:(NSString *)code;
 -(void)authorizePartialCompletion:(PoyntPaymentObject *)payment;
 -(void)authorizePartialRefund:(PoyntPaymentObject *)payment;
