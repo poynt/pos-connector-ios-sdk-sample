@@ -77,10 +77,6 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
                         self.tfIP.text = "\(ip):\(port)"
                         self.paymentManager.url = self.tfIP.text!;
                         self.title = terminal.name
-
-
-                        print("\(#function)\r\nselected terminals ---> \(terminal)")
-                        print("\(#function)\r\nurl for requests: ---> \(self.paymentManager.url)")
                     }
 
                 }
@@ -146,16 +142,16 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
     func setupPaymentManager() {
 
         self.paymentManager.clientName = "Ralph"
-        self.paymentManager.timeout = 30000 // 30 seconds
+        self.paymentManager.timeout = 60000 // 30 seconds
 
         // change to false to remove logging in console
-        //        PoyntDebug.sharedDebugger().verbose = true
+//        PoyntDebug.sharedDebugger().verbose = true
 
 
         //...because nothing is perfect
         paymentManager.onError = {(error) -> Void in
             self.toggleHud(false)
-            print("\(#function)\r\nerror for transaction ---> \(error)")
+
 
             let alert = UIAlertController(title: "Erorr.", message: "There was an error. \(error.localizedDescription)", preferredStyle: .Alert)
             let cancel = UIAlertAction(title: "ok", style: .Default, handler:nil)
@@ -168,7 +164,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             self.toggleHud(false)
             if let obj = transactionObect as PoyntTransactionResponseObject?,
                 let type = apiType as PoyntActionType?{
-                print("\(#function)\r\nreceived response for \(type) ---> \(obj)")
+                
 
                 if let json = obj.rawJson as AnyObject?{
                     let transIds = obj.transactions.map({
