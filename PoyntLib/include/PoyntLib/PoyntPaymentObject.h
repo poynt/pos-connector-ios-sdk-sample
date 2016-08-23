@@ -25,6 +25,7 @@
 @property(nonatomic,strong) PoyntOrderObject *order;
 @property(nonatomic,copy)NSString  *orderId;
 @property(nonatomic,copy)NSString  *referenceId;
+@property(nonatomic,copy)NSString  *transactionId;
 @property(nonatomic)BOOL skipReceiptScreen;
 @property(nonatomic)NSInteger tipAmount;
 @property(nonatomic,strong) NSArray *transactions; //PoyntTransactionObject

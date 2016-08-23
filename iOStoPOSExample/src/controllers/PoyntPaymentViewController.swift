@@ -145,7 +145,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         self.paymentManager.timeout = 60000 // 30 seconds
 
         // change to false to remove logging in console
-//        PoyntDebug.sharedDebugger().verbose = true
+        PoyntDebug.sharedDebugger().verbose = true
 
 
         //...because nothing is perfect

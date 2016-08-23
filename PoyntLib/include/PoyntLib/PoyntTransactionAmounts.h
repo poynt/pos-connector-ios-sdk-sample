@@ -13,8 +13,10 @@
 @property(nonatomic) NSInteger orderAmount;
 @property(nonatomic) NSInteger tipAmount;
 @property(nonatomic) NSInteger cashbackAmount;
+@property(nonatomic) NSInteger transactionAmount;
 @property(nonatomic,strong) NSString *currency;
 
--(id)initWithName:(NSInteger)orderAmount tipAmount:(NSInteger)tipAmount cashbackAmount:(NSInteger)cashbackAmount ;
+-(id)initWithAmount:(NSInteger)orderAmount tipAmount:(NSInteger)tipAmount cashbackAmount:(NSInteger)cashbackAmount;
+-(id)initWithData:(NSDictionary *)data ;
 -(void)calculate:(PoyntOrderObject*)order;
 @end

@@ -14,13 +14,16 @@
 @class PoyntTransactionResponseObject;
 typedef enum {
     Undefined,
-    AuthorizeSales,
-    AuthorizeVoid,
-    AuthorizeRefund,
+    AuthorizeCapture,
+    AuthorizeCompletion,
     AuthorizePair,
     AuthorizePreSales,
-    AuthorizeVoidPreSales,
-    AuthorizeCapture
+    AuthorizePartialCompletion,
+    AuthorizePartialRefund,
+    AuthorizeRefund,
+    AuthorizeSales,
+    AuthorizeVoid,
+    AuthorizeVoidPreSales
 } PoyntActionType;
 
 
@@ -40,7 +43,10 @@ typedef void(^OnError)(NSError *error) ;
 
 
 -(void)authorizeCapture:(PoyntTransactionObject *)transaction;
+-(void)authorizeCompletion:(NSString *)transactionId payment:(PoyntPaymentObject *)payment;
 -(void)authorizePairing:(NSString *)code;
+-(void)authorizePartialCompletion:(PoyntPaymentObject *)payment;
+-(void)authorizePartialRefund:(PoyntPaymentObject *)payment;
 -(void)authorizePreSales:(PoyntPaymentObject *)payment;
 -(void)authorizeRefund:(PoyntTransactionObject *)transaction ;
 -(void)authorizeSales:(PoyntPaymentObject *)payment ;

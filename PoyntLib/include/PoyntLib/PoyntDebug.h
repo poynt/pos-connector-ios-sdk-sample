@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface PoyntDebug : NSObject
-+ (id)sharedDebugger;
++ (PoyntDebug*)sharedDebugger;
 @property(nonatomic) BOOL verbose;
--(void) log:(NSString*)message;
++(void) log:(NSString*)message;
 
 @end

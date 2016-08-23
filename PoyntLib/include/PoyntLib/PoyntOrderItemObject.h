@@ -13,7 +13,7 @@ typedef enum {
     DAYS,
     SECONDS,
     CRATE_OF_12,
-    SIX_PACH,
+    SIX_PACK,
     GALLON,
     LITRE,
     INCH,
