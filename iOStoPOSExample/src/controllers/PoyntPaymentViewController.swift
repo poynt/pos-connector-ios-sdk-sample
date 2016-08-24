@@ -149,7 +149,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
 
 
         //...because nothing is perfect
-        paymentManager.onError = {(error) -> Void in
+        paymentManager.onError = {(error, apiType) -> Void in
             self.toggleHud(false)
 
 

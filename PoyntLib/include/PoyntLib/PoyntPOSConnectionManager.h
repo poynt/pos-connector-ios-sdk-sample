@@ -33,7 +33,7 @@ typedef enum{
 } PoyntPOSPairingStatus;
 
 typedef void(^OnTransactionResponse)(PoyntTransactionResponseObject *data, PoyntActionType type) ;
-typedef void(^OnError)(NSError *error) ;
+typedef void(^OnError)(NSError *error, PoyntActionType type) ;
 
 @interface PoyntPOSConnectionManager : NSObject
 @property(nonatomic,strong) NSString *pairingCode;
