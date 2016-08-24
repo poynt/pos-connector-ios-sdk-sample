@@ -52,8 +52,8 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-
-        if(!self.paymentManager.paired && self.initialLoad){
+        let isPaired = (self.paymentManager.pairingStatus == Paired)
+        if(!isPaired && self.initialLoad){
             self.initialLoad = false
             self.selectingTerminal = true
             self.performSegueWithIdentifier("segueDiscovery", sender: self)

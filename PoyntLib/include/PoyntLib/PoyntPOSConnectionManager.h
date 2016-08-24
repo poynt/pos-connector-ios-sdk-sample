@@ -26,7 +26,11 @@ typedef enum {
     AuthorizeVoidPreSales
 } PoyntActionType;
 
-
+typedef enum{
+    UnPaired,
+    Pairing,
+    Paired
+} PoyntPOSPairingStatus;
 
 typedef void(^OnTransactionResponse)(PoyntTransactionResponseObject *data, PoyntActionType type) ;
 typedef void(^OnError)(NSError *error) ;
@@ -36,7 +40,7 @@ typedef void(^OnError)(NSError *error) ;
 @property(nonatomic,strong) NSString *url;
 @property(nonatomic,strong) NSString *clientName;
 @property(nonatomic) NSInteger timeout;
-@property(nonatomic) BOOL paired;
+@property(nonatomic) PoyntPOSPairingStatus pairingStatus;
 
 @property (readwrite,copy) OnTransactionResponse onTransactionResponse;
 @property (readwrite,copy) OnError onError;
