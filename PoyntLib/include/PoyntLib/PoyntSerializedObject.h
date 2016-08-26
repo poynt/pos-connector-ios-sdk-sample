@@ -7,6 +7,10 @@
 //
 #import <Foundation/Foundation.h>
 
+/**
+ @header PoyntSerializedObject
+ @description all objects that are sent to the Poynt terminal subscribe to this protocol to verify proper json creation
+ **/
 @protocol PoyntSerializedObject <NSObject>
 -(NSDictionary*)dictionaryObject;
 @end
