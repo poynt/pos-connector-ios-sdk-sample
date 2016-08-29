@@ -18,7 +18,9 @@
 		5DDD713E1CA9B6B800DF1093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD713D1CA9B6B800DF1093 /* AppDelegate.swift */; };
 		5DF35BB31C768D6400A3E46E /* TCPTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF35BB21C768D6400A3E46E /* TCPTestTests.swift */; };
 		5DF35BBE1C768D6400A3E46E /* TCPTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF35BBD1C768D6400A3E46E /* TCPTestUITests.swift */; };
-		5DFDF9751D60CE4100C1F86D /* libPoyntLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFDF9741D60CE4100C1F86D /* libPoyntLib.a */; };
+		A5BB086ED8C744E2BD97076A /* Pods_iOStoPOSExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E26E339ADEA812FD1E62638 /* Pods_iOStoPOSExampleTests.framework */; };
+		B21290F1810B95889D8FED48 /* Pods_iOStoPOSExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F93945907ADF30257A53BDD /* Pods_iOStoPOSExampleUITests.framework */; };
+		F29F95349C4BF6233D4CBEA4 /* Pods_iOStoPOSExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8C1B42FFF77B8DE511E520 /* Pods_iOStoPOSExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +55,9 @@
 
 /* Begin PBXFileReference section */
 		007A78692370A3FE7319555A /* Pods-iOStoPOSExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOStoPOSExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOStoPOSExample/Pods-iOStoPOSExample.release.xcconfig"; sourceTree = "<group>"; };
-		5D0BA2331C88F8A600C28592 /* iOStoPOSExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOStoPOSExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		13FE809733313BE9BE36A090 /* Pods-iOStoPOSExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOStoPOSExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOStoPOSExampleTests/Pods-iOStoPOSExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E26E339ADEA812FD1E62638 /* Pods_iOStoPOSExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOStoPOSExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F93945907ADF30257A53BDD /* Pods_iOStoPOSExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOStoPOSExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D60890D1D108D9E0059485E /* String+Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Currency.swift"; sourceTree = "<group>"; };
 		5D66BF6F1D107C4F00F18BB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = src/Assets.xcassets; sourceTree = "<group>"; };
 		5D66BF731D107C4F00F18BB9 /* PoyntOrderItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoyntOrderItemViewController.swift; sourceTree = "<group>"; };
@@ -71,24 +75,10 @@
 		5DF35BB91C768D6400A3E46E /* iOStoPOSExample.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOStoPOSExample.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF35BBD1C768D6400A3E46E /* TCPTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPTestUITests.swift; sourceTree = "<group>"; };
 		5DF35BBF1C768D6400A3E46E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DFDF9641D60CE4100C1F86D /* NSArray+Serialized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Serialized.h"; sourceTree = "<group>"; };
-		5DFDF9651D60CE4100C1F86D /* PoyntDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntDebug.h; sourceTree = "<group>"; };
-		5DFDF9661D60CE4100C1F86D /* PoyntDiscountObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntDiscountObject.h; sourceTree = "<group>"; };
-		5DFDF9671D60CE4100C1F86D /* PoyntLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntLib.h; sourceTree = "<group>"; };
-		5DFDF9681D60CE4100C1F86D /* PoyntOrderItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntOrderItemObject.h; sourceTree = "<group>"; };
-		5DFDF9691D60CE4100C1F86D /* PoyntOrderItemTax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntOrderItemTax.h; sourceTree = "<group>"; };
-		5DFDF96A1D60CE4100C1F86D /* PoyntOrderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntOrderObject.h; sourceTree = "<group>"; };
-		5DFDF96B1D60CE4100C1F86D /* PoyntPaymentAmountObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntPaymentAmountObject.h; sourceTree = "<group>"; };
-		5DFDF96C1D60CE4100C1F86D /* PoyntPaymentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntPaymentObject.h; sourceTree = "<group>"; };
-		5DFDF96D1D60CE4100C1F86D /* PoyntPOSConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntPOSConnectionManager.h; sourceTree = "<group>"; };
-		5DFDF96E1D60CE4100C1F86D /* PoyntSerializedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntSerializedObject.h; sourceTree = "<group>"; };
-		5DFDF96F1D60CE4100C1F86D /* PoyntTerminal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntTerminal.h; sourceTree = "<group>"; };
-		5DFDF9701D60CE4100C1F86D /* PoyntTerminalDiscover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntTerminalDiscover.h; sourceTree = "<group>"; };
-		5DFDF9711D60CE4100C1F86D /* PoyntTransactionAmounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntTransactionAmounts.h; sourceTree = "<group>"; };
-		5DFDF9721D60CE4100C1F86D /* PoyntTransactionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntTransactionObject.h; sourceTree = "<group>"; };
-		5DFDF9731D60CE4100C1F86D /* PoyntTransactionResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoyntTransactionResponseObject.h; sourceTree = "<group>"; };
-		5DFDF9741D60CE4100C1F86D /* libPoyntLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPoyntLib.a; sourceTree = "<group>"; };
+		610E499837EFD07D586DFD72 /* Pods-iOStoPOSExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOStoPOSExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOStoPOSExampleTests/Pods-iOStoPOSExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		695C9F58B4AAABB2C3B491BC /* Pods-iOStoPOSExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOStoPOSExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOStoPOSExampleUITests/Pods-iOStoPOSExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B8C1B42FFF77B8DE511E520 /* Pods_iOStoPOSExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOStoPOSExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5809899D6F33C5210D97E0 /* Pods-iOStoPOSExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOStoPOSExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOStoPOSExampleUITests/Pods-iOStoPOSExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AAFF617A0DD108E27E411CEE /* Pods-iOStoPOSExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOStoPOSExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOStoPOSExample/Pods-iOStoPOSExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DFDF9751D60CE4100C1F86D /* libPoyntLib.a in Frameworks */,
+				F29F95349C4BF6233D4CBEA4 /* Pods_iOStoPOSExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5BB086ED8C744E2BD97076A /* Pods_iOStoPOSExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21290F1810B95889D8FED48 /* Pods_iOStoPOSExampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,12 +113,10 @@
 		5D0BA2471C88F93F00C28592 /* supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				5DFDF9611D60CE4100C1F86D /* PoyntLib */,
 				5D66BF931D107CA400F18BB9 /* LaunchScreen.storyboard */,
 				5D66BF951D107CA400F18BB9 /* Main.storyboard */,
 				5D66BF6F1D107C4F00F18BB9 /* Assets.xcassets */,
 				5DF35BA91C768D6400A3E46E /* Info.plist */,
-				5D0BA2331C88F8A600C28592 /* iOStoPOSExample-Bridging-Header.h */,
 			);
 			name = "supporting files";
 			sourceTree = "<group>";
@@ -212,51 +202,15 @@
 			path = iOStoPOSExampleUITests;
 			sourceTree = "<group>";
 		};
-		5DFDF9611D60CE4100C1F86D /* PoyntLib */ = {
-			isa = PBXGroup;
-			children = (
-				5DFDF9621D60CE4100C1F86D /* include */,
-				5DFDF9741D60CE4100C1F86D /* libPoyntLib.a */,
-			);
-			path = PoyntLib;
-			sourceTree = SOURCE_ROOT;
-		};
-		5DFDF9621D60CE4100C1F86D /* include */ = {
-			isa = PBXGroup;
-			children = (
-				5DFDF9631D60CE4100C1F86D /* PoyntLib */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		5DFDF9631D60CE4100C1F86D /* PoyntLib */ = {
-			isa = PBXGroup;
-			children = (
-				5DFDF9641D60CE4100C1F86D /* NSArray+Serialized.h */,
-				5DFDF9651D60CE4100C1F86D /* PoyntDebug.h */,
-				5DFDF9661D60CE4100C1F86D /* PoyntDiscountObject.h */,
-				5DFDF9671D60CE4100C1F86D /* PoyntLib.h */,
-				5DFDF9681D60CE4100C1F86D /* PoyntOrderItemObject.h */,
-				5DFDF9691D60CE4100C1F86D /* PoyntOrderItemTax.h */,
-				5DFDF96A1D60CE4100C1F86D /* PoyntOrderObject.h */,
-				5DFDF96B1D60CE4100C1F86D /* PoyntPaymentAmountObject.h */,
-				5DFDF96C1D60CE4100C1F86D /* PoyntPaymentObject.h */,
-				5DFDF96D1D60CE4100C1F86D /* PoyntPOSConnectionManager.h */,
-				5DFDF96E1D60CE4100C1F86D /* PoyntSerializedObject.h */,
-				5DFDF96F1D60CE4100C1F86D /* PoyntTerminal.h */,
-				5DFDF9701D60CE4100C1F86D /* PoyntTerminalDiscover.h */,
-				5DFDF9711D60CE4100C1F86D /* PoyntTransactionAmounts.h */,
-				5DFDF9721D60CE4100C1F86D /* PoyntTransactionObject.h */,
-				5DFDF9731D60CE4100C1F86D /* PoyntTransactionResponseObject.h */,
-			);
-			path = PoyntLib;
-			sourceTree = "<group>";
-		};
 		66C96EFC0433BD74DF17B7D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				AAFF617A0DD108E27E411CEE /* Pods-iOStoPOSExample.debug.xcconfig */,
 				007A78692370A3FE7319555A /* Pods-iOStoPOSExample.release.xcconfig */,
+				13FE809733313BE9BE36A090 /* Pods-iOStoPOSExampleTests.debug.xcconfig */,
+				610E499837EFD07D586DFD72 /* Pods-iOStoPOSExampleTests.release.xcconfig */,
+				695C9F58B4AAABB2C3B491BC /* Pods-iOStoPOSExampleUITests.debug.xcconfig */,
+				8C5809899D6F33C5210D97E0 /* Pods-iOStoPOSExampleUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -265,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				8B8C1B42FFF77B8DE511E520 /* Pods_iOStoPOSExample.framework */,
+				2E26E339ADEA812FD1E62638 /* Pods_iOStoPOSExampleTests.framework */,
+				3F93945907ADF30257A53BDD /* Pods_iOStoPOSExampleUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -276,10 +232,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DF35BC21C768D6400A3E46E /* Build configuration list for PBXNativeTarget "iOStoPOSExample" */;
 			buildPhases = (
+				1E9562E2141C8D9D3A6A79F3 /* [CP] Check Pods Manifest.lock */,
 				5DF35B961C768D6400A3E46E /* Sources */,
 				5DF35B971C768D6400A3E46E /* Frameworks */,
 				5DF35B981C768D6400A3E46E /* Resources */,
 				F2D946751D50D4CC00A8841C /* Embed Frameworks */,
+				01218466941C4383AF12090B /* [CP] Embed Pods Frameworks */,
+				C577D07EFA45EFF6156EB21C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,9 +253,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DF35BC51C768D6400A3E46E /* Build configuration list for PBXNativeTarget "iOStoPOSExampleTests" */;
 			buildPhases = (
+				CCB9094DF853830142305AB5 /* [CP] Check Pods Manifest.lock */,
 				5DF35BAA1C768D6400A3E46E /* Sources */,
 				5DF35BAB1C768D6400A3E46E /* Frameworks */,
 				5DF35BAC1C768D6400A3E46E /* Resources */,
+				4DD18BEAF8B209A92C63C912 /* [CP] Embed Pods Frameworks */,
+				3D4EFDAE268B8B2219F3A33F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -312,9 +274,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DF35BC81C768D6400A3E46E /* Build configuration list for PBXNativeTarget "iOStoPOSExampleUITests" */;
 			buildPhases = (
+				6FDCBBCE18F4AFA9C413DEFF /* [CP] Check Pods Manifest.lock */,
 				5DF35BB51C768D6400A3E46E /* Sources */,
 				5DF35BB61C768D6400A3E46E /* Frameworks */,
 				5DF35BB71C768D6400A3E46E /* Resources */,
+				C7185EE924EF51B57CF13434 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -395,6 +359,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01218466941C4383AF12090B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOStoPOSExample/Pods-iOStoPOSExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E9562E2141C8D9D3A6A79F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3D4EFDAE268B8B2219F3A33F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOStoPOSExampleTests/Pods-iOStoPOSExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DD18BEAF8B209A92C63C912 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOStoPOSExampleTests/Pods-iOStoPOSExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FDCBBCE18F4AFA9C413DEFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C577D07EFA45EFF6156EB21C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOStoPOSExample/Pods-iOStoPOSExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7185EE924EF51B57CF13434 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOStoPOSExampleUITests/Pods-iOStoPOSExampleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCB9094DF853830142305AB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5DF35B961C768D6400A3E46E /* Sources */ = {
@@ -544,6 +631,7 @@
 		};
 		5DF35BC31C768D6400A3E46E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAFF617A0DD108E27E411CEE /* Pods-iOStoPOSExample.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -553,7 +641,7 @@
 					"$(PROJECT_DIR)/iOStoPOSExample",
 					"$(PROJECT_DIR)/iOStoPOSExample/src/views",
 				);
-				HEADER_SEARCH_PATHS = $SRCROOT/PoyntLib/include/PoyntLib;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = iOStoPOSExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -570,7 +658,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.poynt.iOStoPOSExample;
 				PRODUCT_NAME = iOStoPOSExample;
-				SWIFT_OBJC_BRIDGING_HEADER = "iOStoPOSExample/iOStoPOSExample-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -579,6 +667,7 @@
 		};
 		5DF35BC41C768D6400A3E46E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 007A78692370A3FE7319555A /* Pods-iOStoPOSExample.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -588,7 +677,7 @@
 					"$(PROJECT_DIR)/iOStoPOSExample",
 					"$(PROJECT_DIR)/iOStoPOSExample/src/views",
 				);
-				HEADER_SEARCH_PATHS = $SRCROOT/PoyntLib/include/PoyntLib;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = iOStoPOSExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -604,7 +693,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.poynt.iOStoPOSExample;
 				PRODUCT_NAME = iOStoPOSExample;
-				SWIFT_OBJC_BRIDGING_HEADER = "iOStoPOSExample/iOStoPOSExample-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -612,6 +701,7 @@
 		};
 		5DF35BC61C768D6400A3E46E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13FE809733313BE9BE36A090 /* Pods-iOStoPOSExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -628,6 +718,7 @@
 		};
 		5DF35BC71C768D6400A3E46E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 610E499837EFD07D586DFD72 /* Pods-iOStoPOSExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -644,6 +735,7 @@
 		};
 		5DF35BC91C768D6400A3E46E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 695C9F58B4AAABB2C3B491BC /* Pods-iOStoPOSExampleUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = iOStoPOSExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -656,6 +748,7 @@
 		};
 		5DF35BCA1C768D6400A3E46E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C5809899D6F33C5210D97E0 /* Pods-iOStoPOSExampleUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = iOStoPOSExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

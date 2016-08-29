@@ -1,0 +1,6 @@
+framework module PoyntSDK {
+  umbrella header "PoyntSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

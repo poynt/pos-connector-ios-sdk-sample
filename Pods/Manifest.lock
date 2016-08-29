@@ -1,0 +1,19 @@
+PODS:
+  - Alamofire (3.4.1)
+  - PoyntSDK (0.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - PoyntSDK (from `./PoyntSDK`)
+
+EXTERNAL SOURCES:
+  PoyntSDK:
+    :path: ./PoyntSDK
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  PoyntSDK: dd9fc21b0999a56dc224721314713d3ab12dfb16
+
+PODFILE CHECKSUM: a2bb53e7b219220473d737769439360f4b1641b6
+
+COCOAPODS: 1.0.1

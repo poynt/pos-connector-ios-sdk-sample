@@ -1,0 +1,22 @@
+{
+  "name": "PoyntSDK",
+  "version": "0.1.1",
+  "summary": "The PoyntSDK allows iOS clients to connect and communicate with the Poynt Smart Terminal.",
+  "description": "The PoyntSDK allows iOS clients to connect and communicate with the Poynt Smart Terminal. The terminal must have the POSConnector installed and running to make requests and pairing possible.",
+  "homepage": "https://github.com/poynt/pos-connector-ios-sdk-sample",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Eric McConkie": "eric@poynt.com"
+  },
+  "source": {
+    "git": "https://github.com/poynt/pos-connector-ios-sdk-sample.git",
+    "tag": "0.1.1"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "PoyntSDK/PoyntLib/**/*"
+}
