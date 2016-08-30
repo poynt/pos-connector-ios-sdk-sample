@@ -1,0 +1,1 @@
+../../../../PoyntSDK/libraries/PoyntSDK/include/PoyntLib/PoyntPOSConnectionManager.h

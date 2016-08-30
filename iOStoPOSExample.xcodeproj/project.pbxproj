@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CC6ACC93A70BF5A891D7A3A /* Pods_iOStoPOSExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8C1B42FFF77B8DE511E520 /* Pods_iOStoPOSExample.framework */; };
 		5D60890E1D108D9E0059485E /* String+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60890D1D108D9E0059485E /* String+Currency.swift */; };
 		5D66BF831D107C4F00F18BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D66BF6F1D107C4F00F18BB9 /* Assets.xcassets */; };
 		5D66BF861D107C4F00F18BB9 /* PoyntOrderItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D66BF731D107C4F00F18BB9 /* PoyntOrderItemViewController.swift */; };
@@ -20,7 +21,6 @@
 		5DF35BBE1C768D6400A3E46E /* TCPTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF35BBD1C768D6400A3E46E /* TCPTestUITests.swift */; };
 		A5BB086ED8C744E2BD97076A /* Pods_iOStoPOSExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E26E339ADEA812FD1E62638 /* Pods_iOStoPOSExampleTests.framework */; };
 		B21290F1810B95889D8FED48 /* Pods_iOStoPOSExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F93945907ADF30257A53BDD /* Pods_iOStoPOSExampleUITests.framework */; };
-		F29F95349C4BF6233D4CBEA4 /* Pods_iOStoPOSExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8C1B42FFF77B8DE511E520 /* Pods_iOStoPOSExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F29F95349C4BF6233D4CBEA4 /* Pods_iOStoPOSExample.framework in Frameworks */,
+				5CC6ACC93A70BF5A891D7A3A /* Pods_iOStoPOSExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,13 +232,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DF35BC21C768D6400A3E46E /* Build configuration list for PBXNativeTarget "iOStoPOSExample" */;
 			buildPhases = (
-				1E9562E2141C8D9D3A6A79F3 /* [CP] Check Pods Manifest.lock */,
+				52E5D2D811E443E076F2D310 /* [CP] Check Pods Manifest.lock */,
 				5DF35B961C768D6400A3E46E /* Sources */,
 				5DF35B971C768D6400A3E46E /* Frameworks */,
 				5DF35B981C768D6400A3E46E /* Resources */,
 				F2D946751D50D4CC00A8841C /* Embed Frameworks */,
-				01218466941C4383AF12090B /* [CP] Embed Pods Frameworks */,
-				C577D07EFA45EFF6156EB21C /* [CP] Copy Pods Resources */,
+				076C74D8FFCBEB32F0A556DB /* [CP] Embed Pods Frameworks */,
+				9BB87EFD8FB6488BEAF26021 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -361,7 +361,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01218466941C4383AF12090B /* [CP] Embed Pods Frameworks */ = {
+		076C74D8FFCBEB32F0A556DB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -374,21 +374,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOStoPOSExample/Pods-iOStoPOSExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1E9562E2141C8D9D3A6A79F3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		3D4EFDAE268B8B2219F3A33F /* [CP] Copy Pods Resources */ = {
@@ -421,6 +406,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOStoPOSExampleTests/Pods-iOStoPOSExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		52E5D2D811E443E076F2D310 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		6FDCBBCE18F4AFA9C413DEFF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,7 +436,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C577D07EFA45EFF6156EB21C /* [CP] Copy Pods Resources */ = {
+		9BB87EFD8FB6488BEAF26021 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -645,17 +645,17 @@
 				INFOPLIST_FILE = iOStoPOSExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/iOStoPOSExample/PoyntLib",
-					"$(PROJECT_DIR)/PoyntLib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
+				OTHER_CFLAGS = (
 					"$(inherited)",
-					"-ObjC",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/PoyntSDK\"",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = co.poynt.iOStoPOSExample;
 				PRODUCT_NAME = iOStoPOSExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -681,16 +681,16 @@
 				INFOPLIST_FILE = iOStoPOSExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/iOStoPOSExample/PoyntLib",
-					"$(PROJECT_DIR)/PoyntLib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LINK_WITH_STANDARD_LIBRARIES = YES;
-				OTHER_LDFLAGS = (
+				OTHER_CFLAGS = (
 					"$(inherited)",
-					"-ObjC",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/PoyntSDK\"",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = co.poynt.iOStoPOSExample;
 				PRODUCT_NAME = iOStoPOSExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "";

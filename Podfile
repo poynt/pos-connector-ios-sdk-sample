@@ -3,7 +3,7 @@
  use_frameworks!
 target 'iOStoPOSExample' do
   pod 'PoyntSDK', :path => './PoyntSDK'
-  pod 'Alamofire'
+  
 
   # Pods for iOStoPOSExample
 
