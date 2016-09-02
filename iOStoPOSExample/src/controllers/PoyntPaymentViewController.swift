@@ -67,21 +67,19 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
     }
     // MARK: - segues and ux
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {
-        self.dismissViewControllerAnimated(true) {
-            if segue.identifier == "unwindToHome" {
-                self.toggleHud(false)
-                if let vc = segue.sourceViewController as? ChooseTerminalViewController,
-                    let terminal = vc.selectedTerminal as PoyntTerminal?{
-                    if let ip = terminal.ip as String?,
-                        let port = terminal.service?.port as Int? {
-                        self.tfIP.text = "\(ip):\(port)"
-                        self.paymentManager.url = self.tfIP.text!;
-                        self.title = terminal.name
-                    }
-
+        if segue.identifier == "unwindToHome" {
+            self.toggleHud(false)
+            if let vc = segue.sourceViewController as? ChooseTerminalViewController,
+                let terminal = vc.selectedTerminal as PoyntTerminal?{
+                if let ip = terminal.ip as String?,
+                    let port = terminal.service?.port as Int? {
+                    self.tfIP.text = "\(ip):\(port)"
+                    self.paymentManager.url = self.tfIP.text!;
+                    self.title = terminal.name
                 }
-                self.selectingTerminal = false
+
             }
+            self.selectingTerminal = false
         }
     }
 
@@ -153,7 +151,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             self.toggleHud(false)
 
 
-            let alert = UIAlertController(title: "Erorr.", message: "There was an error. \(error.localizedDescription)", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "Erorr.", message: "There was an error. \(error.userInfo.description)", preferredStyle: .Alert)
             let cancel = UIAlertAction(title: "ok", style: .Default, handler:nil)
             alert.addAction(cancel)
             self.presentViewController(alert, animated: true, completion: nil)
