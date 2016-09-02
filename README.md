@@ -2,6 +2,20 @@
 Sample demonstrating the usage of Poynt POS Connector SDK for iOS
 
 ##Installation
+### COCOAPOD
+
+Beta feature, but you can apply the library w/ cocoapods.<sup>[1](#myfootnote1)</sup>
+ 
+```
+use_frameworks!
+target 'iOStoPOSExample' do
+  pod 'PoyntLib', :git => 'https://github.com/mcconkiee/poyntsdk.git'
+end
+```	
+<a name="myfootnote1">1</a>: A note about `ONLY_ACTIVE_ARCH` (AKA "Build Active Architecture Only": if your original project has different values for `Debug` to `Release`, be sure the pod target matches.
+
+
+###MANUALLY
 * drop the `PoyntLib` directory into your project. `PoyntLib` should contain the following
 	* `PoyntLib.a` static lib
 	* header files found in `include/PoyntLib/{headerfiles}`
