@@ -77,6 +77,9 @@ transaction.transactionId = oldTransactionIdFromLocalDB;// e.g: @"084583D0-7198-
 
 
 ##Updates
+* 9-2-2016
+	* cocoapod friendly
+	* removed empty order object from payments where not explicitly attached
 * 8-26-2016 - 
 	* documentation in code for public classes
 	* remove dependency for the PoyntTransactionObject in favor of the PoyntTransaction protocol (requires `transactionId`)
