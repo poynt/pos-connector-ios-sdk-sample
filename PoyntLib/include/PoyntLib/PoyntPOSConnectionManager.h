@@ -34,6 +34,10 @@ typedef enum{
 
 typedef void(^OnTransactionResponse)(PoyntTransactionResponseObject *data, PoyntActionType type) ;
 typedef void(^OnError)(NSError *error, PoyntActionType type) ;
+/*!
+ @header The connection manager is the gateway class to communicating with the Poynt terminal.
+ @description This object handles all things from pairing to transaction / payment specific requests
+*/
 
 @interface PoyntPOSConnectionManager : NSObject
 /*!

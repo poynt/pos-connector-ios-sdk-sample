@@ -10,9 +10,11 @@
 
 /*!
  @header PoyntOrderItemObject
+
  @description The order item object depicts each item in an order and the details attached to it.
+ 
  @note all numeric properties default to 0
- **/
+*/
 
 
 
