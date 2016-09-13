@@ -23,7 +23,8 @@ typedef enum {
     AuthorizeRefund,
     AuthorizeSales,
     AuthorizeVoid,
-    AuthorizeVoidPreSales
+    AuthorizeVoidPreSales,
+    AuthorizeAdjustment
 } PoyntActionType;
 
 typedef enum{
@@ -208,4 +209,12 @@ typedef void(^OnError)(NSError *error, PoyntActionType type) ;
  */
 -(void)authorizeVoidPreSales:(id <PoyntTransaction>)transaction ;
 
+/*!
+ @brief sends an adjustment request to the Poynt terminal
+ 
+ @discussion This expects a PoyntPaymentObject. Upon terminal response the paymentManager will receive either the onTransactionResponse or onError handler. The payment object must have an amount associated, and optional tipAmount (if a tip is included)
+ 
+ @param  PoyntPaymentObject
+ */
+-(void)authorizeAdjustment:(PoyntPaymentObject*)payment;
 @end
