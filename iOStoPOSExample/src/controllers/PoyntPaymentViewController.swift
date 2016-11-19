@@ -162,8 +162,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             self.toggleHud(false)
             if let obj = transactionObect as PoyntTransactionResponseObject?,
                 let type = apiType as PoyntActionType?{
-                
-
+                     
                 if let json = obj.rawJson as AnyObject?{
                     let transIds = obj.transactions.map({
                         "id: \($0.transactionId ?? "")"
