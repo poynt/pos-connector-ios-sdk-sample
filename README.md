@@ -9,11 +9,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-PoyntLib is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+Currently the PoyntLib SDK is only available through local [CocoaPods](http://cocoapods.org) installation. To install
+it, download (clone, submodule or however you like) this repo and add to your Podfile:
 
 ```ruby
-pod "PoyntLib", :git => 'https://github.com/mcconkiee/poyntsdk.git'
+pod 'PoyntLib', :path => 'path/to/PoyntLib.podspec'
 ```
 
 If you are using swift, don't forget to create a Bridge header:
@@ -25,10 +25,7 @@ If you are using swift, don't forget to create a Bridge header:
 #endif /* Bridge_h */
 
 ```
-
-## Author
-
-Eric McConkie, eric@ericmcconkie.com
+Checkout the included sample files to see implementations.
 
 ## License
 
