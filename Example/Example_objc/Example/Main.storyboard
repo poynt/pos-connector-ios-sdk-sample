@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Af-t2-MPH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="8CJ-pT-pmc">
+            <objects>
+                <viewController id="3Af-t2-MPH" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j4o-SU-Bzw"/>
+                        <viewControllerLayoutGuide type="bottom" id="eGY-gA-vMy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G7B-oF-6lV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atz-KO-5LK">
+                                <rect key="frame" x="155.5" y="47" width="63" height="30"/>
+                                <state key="normal" title="Connect!"/>
+                                <connections>
+                                    <action selector="onPairTest:" destination="3Af-t2-MPH" eventType="touchUpInside" id="pgW-R9-Ic9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Atz-KO-5LK" firstAttribute="top" secondItem="j4o-SU-Bzw" secondAttribute="bottom" constant="27" id="gPY-NY-F9l"/>
+                            <constraint firstItem="Atz-KO-5LK" firstAttribute="centerX" secondItem="G7B-oF-6lV" secondAttribute="centerX" id="zPU-Sn-0aE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xil-qZ-b0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="417" y="-32"/>
+        </scene>
+    </scenes>
+</document>

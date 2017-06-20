@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "581C2B5699044F5741A9BAAB962898F8A98E9F97",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A411D9A539F7E5F30187A52D23D6BD4D490FA5EE" : 9223372036854775807,
+    "581C2B5699044F5741A9BAAB962898F8A98E9F97" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9FED598C-B641-4B87-AE9D-F64ABDBC96F3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A411D9A539F7E5F30187A52D23D6BD4D490FA5EE" : "",
+    "581C2B5699044F5741A9BAAB962898F8A98E9F97" : "poyntsdk\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SwiftExample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/SwiftExample\/SwiftExample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:mcconkiee\/poyntsdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "581C2B5699044F5741A9BAAB962898F8A98E9F97"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:poynt\/pos-connector-ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A411D9A539F7E5F30187A52D23D6BD4D490FA5EE"
+    }
+  ]
+}

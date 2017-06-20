@@ -1,0 +1,30 @@
+{
+  "name": "PoyntLib",
+  "version": "0.0.9",
+  "summary": "PoyntLib sdk for Poynt Smart terminal",
+  "homepage": "http://poynt.net/PoyntLib",
+  "license": "MIT",
+  "authors": {
+    "Eric McConkie": "eric@ericmcconkie.com"
+  },
+  "platforms": {
+    "ios": null
+  },
+  "source": {
+    "path": "Debug-universal"
+  },
+  "public_header_files": "Debug-universal/include/PoyntLib/**/*.h",
+  "vendored_libraries": "Debug-universal/libPoyntLib.a",
+  "preserve_paths": [
+    "Debug-universal/libPoyntLib.a",
+    "Debug-universal/include/PoyntLib/**/*.h"
+  ],
+  "dependencies": {
+    "Bugsnag": [
+      "~>5.7.0"
+    ],
+    "OpenSSL-Universal": [
+      "~>1.0.1.20"
+    ]
+  }
+}

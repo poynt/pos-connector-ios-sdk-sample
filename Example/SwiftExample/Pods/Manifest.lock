@@ -1,0 +1,27 @@
+PODS:
+  - Bugsnag (5.7.0):
+    - KSCrash/RecordingAdvanced (= 1.11.2)
+  - KSCrash/Recording (1.11.2)
+  - KSCrash/RecordingAdvanced (1.11.2):
+    - KSCrash/Recording
+  - OpenSSL-Universal (1.0.1.20)
+  - PoyntLib (0.0.9):
+    - Bugsnag (~> 5.7.0)
+    - OpenSSL-Universal (~> 1.0.1.20)
+
+DEPENDENCIES:
+  - PoyntLib (from `../../PoyntLib.podspec`)
+
+EXTERNAL SOURCES:
+  PoyntLib:
+    :path: "../../PoyntLib.podspec"
+
+SPEC CHECKSUMS:
+  Bugsnag: d86488d670f91acbce0186e6570e500039676ef0
+  KSCrash: 8acc46aca72b2772d5d1e3cba1da9173db4d705e
+  OpenSSL-Universal: 71f2c4b2ae758e2218090f905e95ca0ac5c01be7
+  PoyntLib: f9ae458bd18cdcb2706050b3ddcbb82016368a3a
+
+PODFILE CHECKSUM: c55d8e55370b0b96250511b308532a7a95df6812
+
+COCOAPODS: 1.1.1

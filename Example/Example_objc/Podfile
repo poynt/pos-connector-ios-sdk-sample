@@ -1,0 +1,6 @@
+
+
+
+target 'Example' do
+  pod 'PoyntLib', :path => '../../PoyntLib.podspec'
+end
