@@ -4,29 +4,22 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "581C2B5699044F5741A9BAAB962898F8A98E9F97" : 9223372036854775807,
     "A411D9A539F7E5F30187A52D23D6BD4D490FA5EE" : 9223372036854775807,
     "122BBC7D200BC6AB3596C0727045DBB4EC571632" : 9223372036854775807
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9FED598C-B641-4B87-AE9D-F64ABDBC96F3",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A380EAF2-37FD-4F9C-AFDF-577F275F8E43",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "581C2B5699044F5741A9BAAB962898F8A98E9F97" : "poyntsdk\/",
     "A411D9A539F7E5F30187A52D23D6BD4D490FA5EE" : "",
     "122BBC7D200BC6AB3596C0727045DBB4EC571632" : "pos-connector-ios-sdk-sample\/"
   },
-  "DVTSourceControlWorkspaceBlueprintNameKey" : "SwiftExample",
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Example",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/SwiftExample\/SwiftExample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/Example_objc\/Example.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:poynt\/pos-connector-ios-sdk-sample.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "122BBC7D200BC6AB3596C0727045DBB4EC571632"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:mcconkiee\/poyntsdk.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "581C2B5699044F5741A9BAAB962898F8A98E9F97"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:poynt\/pos-connector-ios-sdk.git",
