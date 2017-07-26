@@ -1,1 +1,1 @@
-../../../../../../Debug-universal/include/PoyntLib/PoyntPOSConnectionManager.h
+../../../../../../lib-universal/include/PoyntLib/PoyntPOSConnectionManager.h

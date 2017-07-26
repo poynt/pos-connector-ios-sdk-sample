@@ -1,1 +1,1 @@
-../../../../../../Debug-universal/include/PoyntLib/PoyntPaymentAmountObject.h
+../../../../../../lib-universal/include/PoyntLib/PoyntPaymentAmountObject.h

@@ -1,1 +1,1 @@
-../../../../../../Debug-universal/include/PoyntLib/PoyntTransactionAmounts.h
+../../../../../../lib-universal/include/PoyntLib/PoyntTransactionAmounts.h

@@ -178,6 +178,7 @@
 		0F8BD6CCDEC2A9080F2A0B5DC6F3E01B /* Bugsnag-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Bugsnag-dummy.m"; sourceTree = "<group>"; };
 		1043B4A9F50276FFF4BAFE267BF06123 /* conf_api.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = conf_api.h; path = "include-ios/openssl/conf_api.h"; sourceTree = "<group>"; };
 		10AE60A1D1EFDE8204618091371EBF2B /* libcrypto.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcrypto.a; path = "lib-ios/libcrypto.a"; sourceTree = "<group>"; };
+		133511BF731D8338E8EDB81E0BE0FE91 /* libPoyntLib.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libPoyntLib.a; path = "lib-universal/libPoyntLib.a"; sourceTree = "<group>"; };
 		1336E0160B7156349FFEDB18B3439848 /* KSCrashCallCompletion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KSCrashCallCompletion.m; path = Source/KSCrash/Recording/Tools/KSCrashCallCompletion.m; sourceTree = "<group>"; };
 		14CCCA5B5E9768B8E43D2EC7F019DCC3 /* llvm-config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "llvm-config.h"; path = "Source/KSCrash/llvm/Config/llvm-config.h"; sourceTree = "<group>"; };
 		14E51830F0A4445DA0C920A8A313CD41 /* aes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes.h; path = "include-ios/openssl/aes.h"; sourceTree = "<group>"; };
@@ -263,7 +264,6 @@
 		77DB2C77BD3DD058C9ECFB5AC95087DC /* KSString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KSString.h; path = Source/KSCrash/Recording/Tools/KSString.h; sourceTree = "<group>"; };
 		79D5D48E6171E1C037319C53C813679A /* DemangleCPP.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = DemangleCPP.cpp; path = Source/KSCrash/Recording/Tools/DemangleCPP.cpp; sourceTree = "<group>"; };
 		7A17B2D7486AA2A9CFA43FE47668BC7C /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		7C2B97F8109A7D069CCA43DF498BCA70 /* libPoyntLib.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libPoyntLib.a; path = "Debug-universal/libPoyntLib.a"; sourceTree = "<group>"; };
 		7EB400E34FE6125C8E485A27D4F3CDAC /* KSCrashSentry.c */ = {isa = PBXFileReference; includeInIndex = 1; name = KSCrashSentry.c; path = Source/KSCrash/Recording/Sentry/KSCrashSentry.c; sourceTree = "<group>"; };
 		7F8B8D23C88BD7DB6D6D58A6413FAB7B /* NSError+SimpleConstructor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+SimpleConstructor.h"; path = "Source/KSCrash/Recording/Tools/NSError+SimpleConstructor.h"; sourceTree = "<group>"; };
 		807CD197852D1CFB565A11FA64A888E1 /* Fallthrough.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fallthrough.h; path = Source/KSCrash/swift/Basic/Fallthrough.h; sourceTree = "<group>"; };
@@ -430,6 +430,14 @@
 			path = Bugsnag;
 			sourceTree = "<group>";
 		};
+		1B366A7EFD2BF71F3CABB5AB2D19BB0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				133511BF731D8338E8EDB81E0BE0FE91 /* libPoyntLib.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		26CCEE89ADCD9ADEC3FBB1E2CF2E7403 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,14 +487,6 @@
 			);
 			name = KSCrash;
 			path = KSCrash;
-			sourceTree = "<group>";
-		};
-		54DD52559947A4E3FBE6E5108B7676B4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7C2B97F8109A7D069CCA43DF498BCA70 /* libPoyntLib.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6C49482DA5D4F97709CE2787E2211CE4 /* Targets Support Files */ = {
@@ -727,7 +727,7 @@
 		98E8758567A89D6DF52F565DF679198F /* PoyntLib */ = {
 			isa = PBXGroup;
 			children = (
-				54DD52559947A4E3FBE6E5108B7676B4 /* Frameworks */,
+				1B366A7EFD2BF71F3CABB5AB2D19BB0D /* Frameworks */,
 			);
 			name = PoyntLib;
 			path = ../../..;

@@ -11,13 +11,13 @@
     "ios": null
   },
   "source": {
-    "path": "Debug-universal"
+    "path": "lib-universal"
   },
-  "public_header_files": "Debug-universal/include/PoyntLib/**/*.h",
-  "vendored_libraries": "Debug-universal/libPoyntLib.a",
+  "public_header_files": "lib-universal/include/PoyntLib/**/*.h",
+  "vendored_libraries": "lib-universal/libPoyntLib.a",
   "preserve_paths": [
-    "Debug-universal/libPoyntLib.a",
-    "Debug-universal/include/PoyntLib/**/*.h"
+    "lib-universal/libPoyntLib.a",
+    "lib-universal/include/PoyntLib/**/*.h"
   ],
   "dependencies": {
     "Bugsnag": [

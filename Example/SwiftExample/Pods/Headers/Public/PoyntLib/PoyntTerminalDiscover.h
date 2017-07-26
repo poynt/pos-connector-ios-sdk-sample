@@ -1,1 +1,1 @@
-../../../../../../Debug-universal/include/PoyntLib/PoyntTerminalDiscover.h
+../../../../../../lib-universal/include/PoyntLib/PoyntTerminalDiscover.h

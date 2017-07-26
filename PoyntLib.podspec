@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
   s.author             = { "Eric McConkie" => "eric@ericmcconkie.com" }
 
   s.platform     = :ios
-  s.source       = { :path => 'Debug-universal' }
-  s.public_header_files = 'Debug-universal/include/PoyntLib/**/*.h'
-  s.vendored_libraries    = 'Debug-universal/libPoyntLib.a'
-  s.preserve_paths        = 'Debug-universal/libPoyntLib.a', 'Debug-universal/include/PoyntLib/**/*.h'
+  s.source       = { :path => 'lib-universal' }
+  s.public_header_files = 'lib-universal/include/PoyntLib/**/*.h'
+  s.vendored_libraries    = 'lib-universal/libPoyntLib.a'
+  s.preserve_paths        = 'lib-universal/libPoyntLib.a', 'lib-universal/include/PoyntLib/**/*.h'
   s.dependency "Bugsnag",'~>5.7.0'
   s.dependency "OpenSSL-Universal",'~>1.0.1.20'
 

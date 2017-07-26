@@ -1,1 +1,1 @@
-../../../../../../Debug-universal/include/PoyntLib/PoyntSecondScreenObject.h
+../../../../../../lib-universal/include/PoyntLib/PoyntSecondScreenObject.h

@@ -1,1 +1,1 @@
-../../../../../../Debug-universal/include/PoyntLib/NSArray+Serialized.h
+../../../../../../lib-universal/include/PoyntLib/NSArray+Serialized.h
