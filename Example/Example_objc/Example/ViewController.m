@@ -39,11 +39,19 @@
         NSLog(@"ERROR! %@",error);
     }];
     [self.manager attemptPairing:^(BOOL flag, NSError *err) {
-        if(flag){
-            NSLog(@"CONNECTED!");
-        }else{
-            NSLog(@"NOT CONNECTED!: %@",err);
+        NSString *ttle = @"Connected!";
+        NSString *msg = @"Good work, sky's the limit now.";
+        if(err){
+            ttle = @"Oh oh.";
+            msg = @"It appears there was a problem connecting with the terminal.";
         }
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:ttle message:msg preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        [alert addAction:action];
+        [self showViewController:alert sender:self];
     }];
 }
 
