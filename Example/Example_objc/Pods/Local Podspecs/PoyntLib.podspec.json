@@ -1,11 +1,11 @@
 {
   "name": "PoyntLib",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "summary": "PoyntLib sdk for Poynt Smart terminal",
-  "homepage": "http://poynt.net/PoyntLib",
+  "homepage": "https://github.com/poynt/pos-connector-ios-sdk-sample",
   "license": "MIT",
   "authors": {
-    "Eric McConkie": "eric@ericmcconkie.com"
+    "Eric McConkie": "eric@poynt.com"
   },
   "platforms": {
     "ios": null
