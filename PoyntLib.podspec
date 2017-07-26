@@ -10,9 +10,9 @@ Pod::Spec.new do |s|
   s.name         = "PoyntLib"
   s.version      = "0.0.9"
   s.summary      = "PoyntLib sdk for Poynt Smart terminal"
-  s.homepage     = "http://poynt.net/PoyntLib"
+  s.homepage     = "https://github.com/poynt/pos-connector-ios-sdk-sample"
   s.license      = "MIT"
-  s.author             = { "Eric McConkie" => "eric@ericmcconkie.com" }
+  s.author             = { "Eric McConkie" => "eric@poynt.com" }
 
   s.platform     = :ios
   s.source       = { :path => 'lib-universal' }
