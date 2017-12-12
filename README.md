@@ -1,9 +1,10 @@
 # PoyntLib
 
+The Example directory contains SwiftExample and Example_objc. 
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example/Example_objc or Example/SwiftExample directory first. In Xcode open .xcworkspace file in the correspoding directory.
 
 ## Requirements
 
