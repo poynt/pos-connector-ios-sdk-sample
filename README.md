@@ -1,6 +1,6 @@
 # PoyntLib
 
-The Example directory contains SwiftExample and Example_objc. 
+The Example directory contains SwiftExample and Example_objc. The Objective C sample only has the pairing flow. The Swift sample is more complete and contains payment examples.
 
 ## Example
 
@@ -26,6 +26,10 @@ If you are using swift, don't forget to create a Bridge header:
 #endif /* Bridge_h */
 
 ```
+To build and run the SwiftSample you may need to set the **Debug** option to **No** in Build Settings.
+
+![Build Settings](docs/img/builds_architecture.png)
+
 Checkout the included sample files to see implementations.
 
 ## License
