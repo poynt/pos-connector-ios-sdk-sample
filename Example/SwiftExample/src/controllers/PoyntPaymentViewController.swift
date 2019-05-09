@@ -85,8 +85,12 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
             if let vc = segue.source as? ChooseTerminalViewController,
                 let terminal = vc.selectedTerminal as PoyntTerminal?{
                 if let ip = terminal.ip as String?,
-                    let port = terminal.service?.port as Int? {
-                    self.tfIP.text = "\(ip):\(port)"                    
+                    let port = terminal.service?.port as Int?, let name = terminal.name {
+					if (name.contains("HTTPS")) {
+						self.tfIP.text = "https://\(ip):\(port)"
+					} else {
+						self.tfIP.text = "http://\(ip):\(port)"
+					}
                     self.title = terminal.name
                 }
 
@@ -338,7 +342,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         self.present(alert, animated: true, completion: nil)
     }
 
-    func onActionSheet(){
+	@objc func onActionSheet(){
         let alert = UIAlertController(title: "Other Actions", message: "Choose an action below.", preferredStyle: UIAlertControllerStyle.actionSheet)
 
         alert.addAction(UIAlertAction(title: "Void", style: .default, handler: { (action) in
