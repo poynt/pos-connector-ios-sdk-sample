@@ -58,7 +58,11 @@ class ChooseTerminalViewController: UITableViewController{
 
         if let ip = poyntTerminal.ip as String?,
             let port = poyntTerminal.service?.port as Int? {
-            self.paymentManager.url = "\(ip):\(port)"
+			if let name = poyntTerminal.service?.name, name.contains("HTTPS") {
+				self.paymentManager.url = "https://\(ip):\(port)"
+			} else {
+				self.paymentManager.url = "http://\(ip):\(port)"
+			}
             self.paymentManager.attemptPairing { (done, error) in
                 if(error == nil){
                     self.discovery.stop()
