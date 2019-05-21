@@ -1,15 +1,76 @@
 PODS:
-  - Bugsnag (5.7.0):
-    - KSCrash/RecordingAdvanced (= 1.11.2)
-  - KSCrash/Recording (1.11.2)
-  - KSCrash/RecordingAdvanced (1.11.2):
+  - Bugsnag (5.22.1)
+  - KSCrash (1.15.19):
+    - KSCrash/Installations (= 1.15.19)
+  - KSCrash/Installations (1.15.19):
+    - KSCrash/Recording
+    - KSCrash/Reporting
+  - KSCrash/Recording (1.15.19):
+    - KSCrash/Recording/Tools (= 1.15.19)
+  - KSCrash/Recording/Tools (1.15.19)
+  - KSCrash/Reporting (1.15.19):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters (= 1.15.19)
+    - KSCrash/Reporting/MessageUI (= 1.15.19)
+    - KSCrash/Reporting/Sinks (= 1.15.19)
+    - KSCrash/Reporting/Tools (= 1.15.19)
+  - KSCrash/Reporting/Filters (1.15.19):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Alert (= 1.15.19)
+    - KSCrash/Reporting/Filters/AppleFmt (= 1.15.19)
+    - KSCrash/Reporting/Filters/Base (= 1.15.19)
+    - KSCrash/Reporting/Filters/Basic (= 1.15.19)
+    - KSCrash/Reporting/Filters/GZip (= 1.15.19)
+    - KSCrash/Reporting/Filters/JSON (= 1.15.19)
+    - KSCrash/Reporting/Filters/Sets (= 1.15.19)
+    - KSCrash/Reporting/Filters/Stringify (= 1.15.19)
+    - KSCrash/Reporting/Filters/Tools (= 1.15.19)
+  - KSCrash/Reporting/Filters/Alert (1.15.19):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/AppleFmt (1.15.19):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/Base (1.15.19):
+    - KSCrash/Recording
+  - KSCrash/Reporting/Filters/Basic (1.15.19):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/GZip (1.15.19):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/JSON (1.15.19):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/Sets (1.15.19):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/AppleFmt
+    - KSCrash/Reporting/Filters/Base
+    - KSCrash/Reporting/Filters/Basic
+    - KSCrash/Reporting/Filters/GZip
+    - KSCrash/Reporting/Filters/JSON
+    - KSCrash/Reporting/Filters/Stringify
+  - KSCrash/Reporting/Filters/Stringify (1.15.19):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/Tools (1.15.19):
+    - KSCrash/Recording
+  - KSCrash/Reporting/MessageUI (1.15.19):
+    - KSCrash/Recording
+  - KSCrash/Reporting/Sinks (1.15.19):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters
+    - KSCrash/Reporting/Tools
+  - KSCrash/Reporting/Tools (1.15.19):
     - KSCrash/Recording
   - OpenSSL-Universal (1.0.1.20)
   - PoyntLib (1.0.0):
-    - Bugsnag (~> 5.7.0)
     - OpenSSL-Universal (~> 1.0.1.20)
 
 DEPENDENCIES:
+  - Bugsnag
+  - KSCrash
+  - OpenSSL-Universal
   - PoyntLib (from `../../PoyntLib.podspec`)
 
 SPEC REPOS:
@@ -23,11 +84,11 @@ EXTERNAL SOURCES:
     :path: "../../PoyntLib.podspec"
 
 SPEC CHECKSUMS:
-  Bugsnag: d86488d670f91acbce0186e6570e500039676ef0
-  KSCrash: 8acc46aca72b2772d5d1e3cba1da9173db4d705e
+  Bugsnag: 699634c49b03f3fdf04a8ad6ab6470e9bcc3834b
+  KSCrash: 49855f7867f7d456905c241640a203f53588497d
   OpenSSL-Universal: 71f2c4b2ae758e2218090f905e95ca0ac5c01be7
-  PoyntLib: 0128497e80a96860b615721873ec9f1abab84747
+  PoyntLib: 606da1c4c3ffa79fe30b9e76aae431ec4ad8ac68
 
-PODFILE CHECKSUM: c55d8e55370b0b96250511b308532a7a95df6812
+PODFILE CHECKSUM: b6b5a0e4f08cf1c2da1d0e8f38010d4337adc2c0
 
 COCOAPODS: 1.6.2

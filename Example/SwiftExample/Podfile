@@ -3,4 +3,7 @@
 
 target 'SwiftExample' do
   pod 'PoyntLib', :path => '../../PoyntLib.podspec'
+  pod 'Bugsnag'
+  pod 'KSCrash'
+  pod 'OpenSSL-Universal'
 end
