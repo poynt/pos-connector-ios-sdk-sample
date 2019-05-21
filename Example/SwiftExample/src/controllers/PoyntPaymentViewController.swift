@@ -218,7 +218,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
                 var msg = " response details below."
                 var refund: UIAlertAction?
                 var capture: UIAlertAction?
-                if obj.status == "COMPLETED" || obj.status == "SUCCESS"{
+                if obj.status == "COMPLETED" || obj.status == "SUCCESS" || obj.status == "AUTHORIZED" {
                     self.bottomContainer.isHidden = false
 
                     if type == AuthorizePair || type == AuthorizePairWithKey {
@@ -240,8 +240,10 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
                         })
 
                         capture = UIAlertAction(title: "Capture", style: .default, handler: { (action) in
+                            let payment = PoyntPaymentObject()
                             if let transaction = obj.transactions.first as? PoyntTransactionObject {
-                                self.poyntAction(AuthorizeCapture, transaction: transaction)
+                                payment.transactionId = transaction.transactionId
+                                self.poyntAction(AuthorizeCapture, transaction: payment);
                             }
                         })
                     }
@@ -399,7 +401,7 @@ class PoyntPaymentViewController: UIViewController ,UITableViewDataSource, UITab
         case AuthorizePreSales:
             self.paymentManager.authorizePreSales(transaction as! PoyntPaymentObject)
         case AuthorizeCapture:
-            self.paymentManager.authorizeCapture(transaction as! PoyntTransactionObject)
+            self.paymentManager.authorizeCapture(transaction as! PoyntPaymentObject)
         case AuthorizeVoid:
             self.paymentManager.authorizeVoid(transaction as! PoyntTransactionObject)
         case AuthorizeVoidPreSales:
