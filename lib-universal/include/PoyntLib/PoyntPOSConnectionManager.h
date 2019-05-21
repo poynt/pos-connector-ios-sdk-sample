@@ -165,13 +165,13 @@ typedef void(^OnError)(NSError *error, PoyntActionType type) ;
 /*!
  @brief sends a captured sale request to the Poynt terminal
 
- @discussion This expects a valid PoyntTransactionObject. 
+ @discussion This expects a valid PoyntPaymentObject.
  Upon terminal response the paymentManager will receive either the onTransactionResponse or onError handler
 
- @param  PoyntTransactionObject - transactionId is required
+ @param  PoyntPaymentObject
 
  */
--(void)authorizeCapture:(PoyntTransactionObject *)transaction;
+-(void)authorizeCapture:(PoyntPaymentObject *)payment;
     
 
 /*!
